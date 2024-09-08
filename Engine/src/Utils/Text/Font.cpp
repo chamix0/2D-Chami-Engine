@@ -13,7 +13,7 @@ Font::~Font()
     delete []bakedChar;
 }
 
-Font::Font(ltex_t* texture, stbtt_bakedchar* bakedChar, float height, Vec2 textSize, Vec2 color):
+Font::Font(ltex_t* texture, stbtt_bakedchar* bakedChar, float height, Vec2 textSize):
     texture(texture), bakedChar(bakedChar), height(height),
     textSize(textSize)
     

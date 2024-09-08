@@ -5,7 +5,7 @@
 
 #include "../Utils/Vec2.h"
 #include "../Utils/Audio/AudioBuffer.h"
-#include "AL/alc.h"
+#include "../../openal/AL/alc.h"
 
 
 class Vec2;

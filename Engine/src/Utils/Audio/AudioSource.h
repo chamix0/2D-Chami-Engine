@@ -2,7 +2,7 @@
 #include <string>
 
 #include "../Vec2.h"
-#include "AL/al.h"
+#include "../../../openal/AL/al.h"
 
 class AudioBuffer;
 

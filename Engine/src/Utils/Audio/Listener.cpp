@@ -2,7 +2,7 @@
 
 #include "AudioBuffer.h"
 #include "../MathUtils.h"
-#include "AL/al.h"
+#include "../../../openal/AL/al.h"
 
 
 Listener::Listener(): m_position(Vec2()), m_velocity(Vec2()), m_orientation(Vec2())

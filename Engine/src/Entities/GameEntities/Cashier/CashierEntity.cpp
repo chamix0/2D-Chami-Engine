@@ -1,12 +1,11 @@
 #include "CashierEntity.h"
 #include "../../../Utils/Sprite/Sprite.h"
 #include "../../../Engine_Managers/LogicManager.h"
-
 #include "../../../Utils/MathUtils.h"
 #include "../Dialogue/DialogueEntity.h"
 
 CashierEntity::CashierEntity(Vec2 position, int renderLayer): Entity(
-    position, renderLayer, "cashier")
+                                                                  position, renderLayer, "cashier"), m_Player(nullptr)
 {
     //machine text
     m_machineText = new Text("data/Fonts/Bubbleboddy.ttf", "Caja", 13, Vec2(0, 1, 0));

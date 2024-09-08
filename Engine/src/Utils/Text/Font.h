@@ -15,7 +15,7 @@ public:
 
 public:
     ~Font();
-    Font(ltex_t* texture, stbtt_bakedchar* bakedChar, float height, Vec2 textSize, Vec2 color = Vec2(1));
+    Font(ltex_t* texture, stbtt_bakedchar* bakedChar, float height, Vec2 textSize);
     float getHeight() const;
     Vec2 getTextSize() const;
     Vec2 GetEndOfTextPosition(std::string text, Vec2 pos);
