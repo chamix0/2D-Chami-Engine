@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dialogue name="julieta" >
+	<text text="ksldajfldks laksdjfla dkjf|alsdkjf askldjflaskdjflaskdf|jalskdjflaksdjflaksdj lakf jsafjklasdjf"/>	
+	<text text="texto 2f sdfasdfa "/>
+	<text text="texto 3 jsdkñfjalsdk "/>
+
+	<option option="todo okay"/>
+	<option option="porfavor me lo repites"/>
+</Dialogue>

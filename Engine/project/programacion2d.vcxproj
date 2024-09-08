@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\lib\Enums.h" />
+    <ClInclude Include="..\lib\glfw3.h" />
+    <ClInclude Include="..\lib\glfw3native.h" />
+    <ClInclude Include="..\lib\litegfx.h" />
+    <ClInclude Include="..\lib\pugiconfig.hpp" />
+    <ClInclude Include="..\lib\pugixml.hpp" />
+    <ClInclude Include="..\lib\stb_image.h" />
+    <ClInclude Include="..\lib\stb_truetype.h" />
+    <ClInclude Include="..\openal\AL\al.h" />
+    <ClInclude Include="..\openal\AL\alc.h" />
+    <ClInclude Include="..\openal\AL\alext.h" />
+    <ClInclude Include="..\openal\AL\alut.h" />
+    <ClInclude Include="..\openal\AL\efx-creative.h" />
+    <ClInclude Include="..\openal\AL\efx-presets.h" />
+    <ClInclude Include="..\openal\AL\efx.h" />
+    <ClInclude Include="..\src\Engine_Managers\AudioManager.h" />
+    <ClInclude Include="..\src\Engine_Managers\Input\InputKeys.h" />
+    <ClInclude Include="..\src\Engine_Managers\Input\InputManager.h" />
+    <ClInclude Include="..\src\Engine_Managers\Input\JoyStickValue.h" />
+    <ClInclude Include="..\src\Engine_Managers\LogicManager.h" />
+    <ClInclude Include="..\src\Engine_Managers\RenderEngine.h" />
+    <ClInclude Include="..\src\Engine_Managers\TimeManager.h" />
+    <ClInclude Include="..\src\Entities\CoreEntities\FontEntity.h" />
+    <ClInclude Include="..\src\Entities\CoreEntities\SquareEntity.h" />
+    <ClInclude Include="..\src\Entities\CoreEntities\Tiles\AlienTileEntity.h" />
+    <ClInclude Include="..\src\Entities\CoreEntities\Tiles\Node.h" />
+    <ClInclude Include="..\src\Entities\CoreEntities\Tiles\OclussionTileEntity.h" />
+    <ClInclude Include="..\src\Entities\CoreEntities\Tiles\TileEntity.h" />
+    <ClInclude Include="..\src\Entities\Entity.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\Camera\GameCameraEntity.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\Cashier\CashierEntity.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\Coins\CoinEntity.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\Collisions\BoxColliderEntity.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\Dialogue\Dialogue.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\Dialogue\DialogueEntity.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\GameOver\GameOverScreenEntity.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\Items\ItemDistributorEntity.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\LoadScreenEntity\LoadScreenEntity.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\MainMenu\MainMenuEntity.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\Player\GameData.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\Player\Hud\HudEntity.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\Player\PlayerEntity.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\WinScreen\WinScreenEntity.h" />
+    <ClInclude Include="..\src\Scenes\Scene.h" />
+    <ClInclude Include="..\src\Scenes\SceneManager.h" />
+    <ClInclude Include="..\src\Utils\Audio\AudioBuffer.h" />
+    <ClInclude Include="..\src\Utils\Audio\AudioSource.h" />
+    <ClInclude Include="..\src\Utils\Audio\Listener.h" />
+    <ClInclude Include="..\src\Utils\Camera.h" />
+    <ClInclude Include="..\src\Utils\Collision\CircleCollider.h" />
+    <ClInclude Include="..\src\Utils\Collision\Collider.h" />
+    <ClInclude Include="..\src\Utils\Collision\PixelsCollider.h" />
+    <ClInclude Include="..\src\Utils\Collision\RectCollider.h" />
+    <ClInclude Include="..\src\Utils\Debug\DebugElem.h" />
+    <ClInclude Include="..\src\Utils\Debug\DrawDebugUtils.h" />
+    <ClInclude Include="..\src\Utils\MathUtils.h" />
+    <ClInclude Include="..\src\Utils\Sprite\Sprite.h" />
+    <ClInclude Include="..\src\Utils\StopWatch.h" />
+    <ClInclude Include="..\src\Utils\Text\Font.h" />
+    <ClInclude Include="..\src\Utils\Text\FontEnum.h" />
+    <ClInclude Include="..\src\Utils\Text\Text.h" />
+    <ClInclude Include="..\src\Utils\UI\Button.h" />
+    <ClInclude Include="..\src\Utils\Vec2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\lib\pugixml.cpp" />
+    <ClCompile Include="..\src\Engine_Managers\AudioManager.cpp" />
+    <ClCompile Include="..\src\Engine_Managers\Input\InputManager.cpp" />
+    <ClCompile Include="..\src\Engine_Managers\Input\JoyStickValue.cpp" />
+    <ClCompile Include="..\src\Engine_Managers\LogicManager.cpp" />
+    <ClCompile Include="..\src\Engine_Managers\RenderEngine.cpp" />
+    <ClCompile Include="..\src\Engine_Managers\TimeManager.cpp" />
+    <ClCompile Include="..\src\Entities\CoreEntities\FontEntity.cpp" />
+    <ClCompile Include="..\src\Entities\CoreEntities\SquareEntity.cpp" />
+    <ClCompile Include="..\src\Entities\CoreEntities\Tiles\AlienTileEntity.cpp" />
+    <ClCompile Include="..\src\Entities\CoreEntities\Tiles\Node.cpp" />
+    <ClCompile Include="..\src\Entities\CoreEntities\Tiles\OclussionTileEntity.cpp" />
+    <ClCompile Include="..\src\Entities\CoreEntities\Tiles\TileEntity.cpp" />
+    <ClCompile Include="..\src\Entities\Entity.cpp" />
+    <ClCompile Include="..\src\Entities\GameEntities\Camera\GameCameraEntity.cpp" />
+    <ClCompile Include="..\src\Entities\GameEntities\Cashier\CashierEntity.cpp">
+      <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <Optimization>Disabled</Optimization>
+      <SupportJustMyCode>true</SupportJustMyCode>
+      <AssemblerOutput>NoListing</AssemblerOutput>
+      <AssemblerListingLocation>programacion2d\Debug\</AssemblerListingLocation>
+      <UndefineAllPreprocessorDefinitions>false</UndefineAllPreprocessorDefinitions>
+      <BrowseInformation>false</BrowseInformation>
+      <BrowseInformationFile>programacion2d\Debug\</BrowseInformationFile>
+      <CompileAs>Default</CompileAs>
+      <ConformanceMode>Default</ConformanceMode>
+      <DiagnosticsFormat>Column</DiagnosticsFormat>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <ErrorReporting>Prompt</ErrorReporting>
+      <ExpandAttributedSource>false</ExpandAttributedSource>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <EnableASAN>false</EnableASAN>
+      <EnableFuzzer>false</EnableFuzzer>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <GenerateModuleDependencies>false</GenerateModuleDependencies>
+      <GenerateSourceDependencies>false</GenerateSourceDependencies>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <LanguageStandard>Default</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ModuleDependenciesFile>programacion2d\Debug\</ModuleDependenciesFile>
+      <ModuleOutputFile>programacion2d\Debug\</ModuleOutputFile>
+      <OmitDefaultLibName>false</OmitDefaultLibName>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <ObjectFileName>programacion2d\Debug\</ObjectFileName>
+      <CallingConvention>Cdecl</CallingConvention>
+      <ProgramDataBaseFileName>programacion2d\Debug\vc143.pdb</ProgramDataBaseFileName>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>programacion2d\Debug\programacion2d.pch</PrecompiledHeaderOutputFile>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessKeepComments>false</PreprocessKeepComments>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <RemoveUnreferencedCodeData>true</RemoveUnreferencedCodeData>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+      <ShowIncludes>false</ShowIncludes>
+      <SourceDependenciesFile>programacion2d\Debug\</SourceDependenciesFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <SpectreMitigation>false</SpectreMitigation>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <TrackerLogDirectory>programacion2d\Debug\programacion2d.tlog\</TrackerLogDirectory>
+      <TranslateIncludes>false</TranslateIncludes>
+      <MinimalRebuildFromTracking>true</MinimalRebuildFromTracking>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>true</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <XMLDocumentationFileName>programacion2d\Debug\</XMLDocumentationFileName>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <IntelJCCErratum>false</IntelJCCErratum>
+      <BuildStlModules>false</BuildStlModules>
+      <TreatAngleIncludeAsExternal>false</TreatAngleIncludeAsExternal>
+      <ExternalWarningLevel>InheritWarningLevel</ExternalWarningLevel>
+      <TreatExternalTemplatesAsInternal>true</TreatExternalTemplatesAsInternal>
+      <DisableAnalyzeExternal>false</DisableAnalyzeExternal>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_UNICODE;UNICODE;</PreprocessorDefinitions>
+      <EnablePREfast>false</EnablePREfast>
+      <OmitFramePointers>false</OmitFramePointers>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../openal;../project;../lib;</AdditionalIncludeDirectories>
+      <LinkCompiled>true</LinkCompiled>
+    </ClCompile>
+    <ClCompile Include="..\src\Entities\GameEntities\Coins\CoinEntity.cpp" />
+    <ClCompile Include="..\src\Entities\GameEntities\Collisions\BoxColliderEntity.cpp" />
+    <ClCompile Include="..\src\Entities\GameEntities\Dialogue\Dialogue.cpp" />
+    <ClCompile Include="..\src\Entities\GameEntities\Dialogue\DialogueEntity.cpp" />
+    <ClCompile Include="..\src\Entities\GameEntities\GameOver\GameOverScreenEntity.cpp" />
+    <ClCompile Include="..\src\Entities\GameEntities\Items\ItemDistributorEntity.cpp" />
+    <ClCompile Include="..\src\Entities\GameEntities\LoadScreenEntity\LoadScreenEntity.cpp" />
+    <ClCompile Include="..\src\Entities\GameEntities\MainMenu\MainMenuEntity.cpp" />
+    <ClCompile Include="..\src\Entities\GameEntities\Player\GameData.cpp" />
+    <ClCompile Include="..\src\Entities\GameEntities\Player\Hud\HudEntity.cpp" />
+    <ClCompile Include="..\src\Entities\GameEntities\Player\PlayerEntity.cpp" />
+    <ClCompile Include="..\src\Entities\GameEntities\WinScreen\WinScreenEntity.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\Scenes\Scene.cpp" />
+    <ClCompile Include="..\src\Scenes\SceneManager.cpp" />
+    <ClCompile Include="..\src\Utils\Audio\AudioBuffer.cpp" />
+    <ClCompile Include="..\src\Utils\Audio\AudioSource.cpp" />
+    <ClCompile Include="..\src\Utils\Audio\Listener.cpp" />
+    <ClCompile Include="..\src\Utils\Camera.cpp" />
+    <ClCompile Include="..\src\Utils\Collision\CircleCollider.cpp" />
+    <ClCompile Include="..\src\Utils\Collision\Collider.cpp" />
+    <ClCompile Include="..\src\Utils\Collision\PixelsCollider.cpp" />
+    <ClCompile Include="..\src\Utils\Collision\RectCollider.cpp" />
+    <ClCompile Include="..\src\Utils\Debug\DebugElem.cpp" />
+    <ClCompile Include="..\src\Utils\Debug\DrawDebugUtils.cpp" />
+    <ClCompile Include="..\src\Utils\MathUtils.cpp" />
+    <ClCompile Include="..\src\Utils\Sprite\Sprite.cpp" />
+    <ClCompile Include="..\src\Utils\StopWatch.cpp" />
+    <ClCompile Include="..\src\Utils\Text\Font.cpp">
+      <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <Optimization>Disabled</Optimization>
+      <SupportJustMyCode>true</SupportJustMyCode>
+      <AssemblerOutput>NoListing</AssemblerOutput>
+      <AssemblerListingLocation>Debug\</AssemblerListingLocation>
+      <UndefineAllPreprocessorDefinitions>false</UndefineAllPreprocessorDefinitions>
+      <BrowseInformation>false</BrowseInformation>
+      <BrowseInformationFile>Debug\</BrowseInformationFile>
+      <CompileAs>Default</CompileAs>
+      <ConformanceMode>Default</ConformanceMode>
+      <DiagnosticsFormat>Column</DiagnosticsFormat>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <ErrorReporting>Prompt</ErrorReporting>
+      <ExpandAttributedSource>false</ExpandAttributedSource>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <EnableASAN>false</EnableASAN>
+      <EnableFuzzer>false</EnableFuzzer>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <GenerateModuleDependencies>false</GenerateModuleDependencies>
+      <GenerateSourceDependencies>false</GenerateSourceDependencies>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <LanguageStandard>Default</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ModuleDependenciesFile>Debug\</ModuleDependenciesFile>
+      <ModuleOutputFile>Debug\</ModuleOutputFile>
+      <OmitDefaultLibName>false</OmitDefaultLibName>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <ObjectFileName>Debug\</ObjectFileName>
+      <CallingConvention>Cdecl</CallingConvention>
+      <ProgramDataBaseFileName>Debug\vc143.pdb</ProgramDataBaseFileName>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>Debug\programacion2d.pch</PrecompiledHeaderOutputFile>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessKeepComments>false</PreprocessKeepComments>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <RemoveUnreferencedCodeData>true</RemoveUnreferencedCodeData>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+      <ShowIncludes>false</ShowIncludes>
+      <SourceDependenciesFile>Debug\</SourceDependenciesFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <SpectreMitigation>false</SpectreMitigation>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <TrackerLogDirectory>Debug\programacion2d.tlog\</TrackerLogDirectory>
+      <TranslateIncludes>false</TranslateIncludes>
+      <MinimalRebuildFromTracking>true</MinimalRebuildFromTracking>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>true</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <XMLDocumentationFileName>Debug\</XMLDocumentationFileName>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <IntelJCCErratum>false</IntelJCCErratum>
+      <TreatAngleIncludeAsExternal>false</TreatAngleIncludeAsExternal>
+      <ExternalWarningLevel>InheritWarningLevel</ExternalWarningLevel>
+      <TreatExternalTemplatesAsInternal>true</TreatExternalTemplatesAsInternal>
+      <DisableAnalyzeExternal>false</DisableAnalyzeExternal>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_UNICODE;UNICODE;</PreprocessorDefinitions>
+      <EnablePREfast>false</EnablePREfast>
+      <OmitFramePointers>false</OmitFramePointers>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../openal;../project;../lib;</AdditionalIncludeDirectories>
+      <LinkCompiled>true</LinkCompiled>
+    </ClCompile>
+    <ClCompile Include="..\src\Utils\Text\Text.cpp" />
+    <ClCompile Include="..\src\Utils\UI\Button.cpp" />
+    <ClCompile Include="..\src\Utils\Vec2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\lib\glfw3.lib" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{12C74402-E6BB-4B59-A4A7-43EEAE9E5D6A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>programacion2d</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>D:\Master Prog. Videojuegos\Audio\Practica3Motores2D\plantilla\project;$(LibraryPath)</LibraryPath>
+    <ReferencePath>D:\Master Prog. Videojuegos\Audio\Practica3Motores2D\plantilla\project;$(ReferencePath)</ReferencePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../openal;../project;../lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../openal/al;../project;../openal;../lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;OpenAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../lib</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\Master Prog. Videojuegos\Audio\Practica3Motores2D\plantilla\openal;D:\Master Prog. Videojuegos\Audio\Practica3Motores2D\plantilla\openal\AL;../lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../openal;../project;../lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../openal/al;../project;../openal;../lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;OpenAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../lib</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

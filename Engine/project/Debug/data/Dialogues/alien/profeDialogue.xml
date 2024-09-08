@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dialogue name="Profe">
+	<text text=" Anda! Pero si es usted, joven. Hacia mucho|que no le veia. Seguro que se acuerda de mi|yo le di clase en el instituto. A mi su cara|no se me olvida, recuerdo cuando vino a mi|despacho con los ojos hinchados cuando le|suspendi la evaluacion, ja, ja."/>
+
+	<option option="si, me acuerdo de usted. Si, ese soy yo, el que suspendio la evaluacion con|un 4,9"/>
+	<option option="si, me acuerdo de usted. Si, ese soy yo, el que suspendio la evaluacion con|un 4,9 Siento haber ido llorando a su despacho, es que cuando vi el 4 en el|boletin de notas me decepcione yo esperaba un 5"/>
+	<option option="si, me acuerdo de usted. Si, ese soy yo, el que suspendio la evaluacion con|un 4,9 Siento haber ido llorando a su despacho, es que cuando vi el 4 en el|boletin de notas me decepcione yo esperaba un 5 Pero no pasa nada, lo|entiendo, no me merecia aprobar, realmente un 4,9 esta mas cerca del 4 que|del 5. No era tan buen estudiante como para que me perdonara un 0,1|de hecho yo pensaba que iba a sacar un 3 en el examen... Eh... Ha visto la leche|sin lactosa"/>
+</Dialogue>

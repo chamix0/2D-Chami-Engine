@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dialogue name="Exnovia">
+	<text text="Pero mira quien esta aqui, la persona mas| aburrida de Espana. Ya te has decidido a|salir de tu cueva de otakus para pisar el|mundo real? Ya has tocado cesped? Y|pensar que te di una oportunidad hace|tiempo... Que ingenuo fui."/>
+
+	<option option="Hola...Yo...Realmente...He venido a comprar leche..."/>
+	<option option="Hola...Yo...Realmente...He venido a comprar leche...No esperaba|encontrarte por aqui, pensaba que te habias ido a vivir a Monaco con tu|nuevo novio..."/>
+	<option option="Hola...Yo...Realmente...He venido a comprar leche...No esperaba|encontrarte por aqui, pensaba que te habias ido a vivir a Monaco con tu|nuevo novio... No es que te espie ni nada, es que lo vi en las redes sociales...|No es que este pendiente de tus redes sociales... Yo... Ya te he superado... O|sea... Es que... Perdona, me llama mi madre, mama Hola"/>
+</Dialogue>

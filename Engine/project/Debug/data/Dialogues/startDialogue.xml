@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dialogue name="Tu Colega" >
+	<text text="Pero tolai..."/>	
+	<text text="Nos hemos quedado sin leche."/>	
+	<text text="Acercate al super y pilla tres o cuatro|tetrabricks, que en un rato vienen estos|a desayunar y ya sabes que engullen como|animales"/>	
+	<text text="Pero coge una sin lactosa, que ya sabes|que el Marc es intolerante o no se que|mierdas bohemias"/>	
+	<text text="Y date prisa si quieres ver el partido,|que empieza en media hora"/>	
+
+	<option option="perfe ahora mismo voy."/>
+	<option option="me lo puedes repetir..."/>
+</Dialogue>

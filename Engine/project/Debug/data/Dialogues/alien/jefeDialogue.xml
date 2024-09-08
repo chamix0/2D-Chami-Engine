@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dialogue name="JEFE">
+	<text text="Que pasa, crack? Hace mucho que no te veo|tio que tal te va? Seguro que ya te han|pillado en alguna empresa supertocha|por la experiencia trabajando conmigo,|de nada, eh."/>
+	<option option="no, la verdad es que aun no me han pillado en ningun sitio"/>
+	<option option="no, la verdad es que aun no me han pillado en ningun sitio. La verdad es que|no me extrana porque tampoco soy tan bueno y realmente no tengo tanta|experiencia..."/>
+	<option option="no, la verdad es que aun no me han pillado en ningun sitio. La verdad es que|no me extrana porque tampoco soy tan bueno y realmente no tengo tanta|experiencia... no estoy cuestionando tu capacidad de seleccion por|haberme elegido para hacer practicas contigo en tu empresa. Al reves|agradezco que me hayas dado la oportunidad de adquirir experiencia|laboral con practicas no remuneradas... Yo tampoco me merecia dinero por|mi trabajo... Sabes en que pasillo esta la leche"/>
+</Dialogue>
+

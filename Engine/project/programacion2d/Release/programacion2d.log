@@ -1,0 +1,196 @@
+﻿  pugixml.cpp
+  AudioManager.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Audio\AudioSource.h(5,10): fatal  error C1083: No se puede abrir el archivo incluir: 'AL/al.h': No such file or directory
+  InputManager.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Engine_Managers\Input\InputManager.cpp(94,20): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Engine_Managers\Input\InputManager.cpp(94,17): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  JoyStickValue.cpp
+  LogicManager.cpp
+  RenderEngine.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': redefinición de macro
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\lib\glfw3.h(98,1): message : vea la definición anterior de 'APIENTRY'
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Engine_Managers\RenderEngine.cpp(235,20): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Engine_Managers\RenderEngine.cpp(235,17): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Engine_Managers\RenderEngine.cpp(245,23): warning C4018: '<': no coinciden signed/unsigned
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Engine_Managers\RenderEngine.cpp(282,27): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Engine_Managers\RenderEngine.cpp(284,27): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+  TimeManager.cpp
+  InputToText.cpp
+  OrbitSphereEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P1\OrbitSphereEntity.cpp(18,47): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P1\OrbitSphereEntity.cpp(18,28): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P1\OrbitSphereEntity.cpp(23,27): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+  FireEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\FireEntity.cpp(18,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\FireEntity.cpp(30,26): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\FireEntity.cpp(30,23): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\FireEntity.cpp(37,40): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\FireEntity.cpp(37,28): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+  GrilleEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\GrilleEntity.cpp(38,43): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\GrilleEntity.cpp(38,32): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+  LightEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(19,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(30,26): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(30,23): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(36,40): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(36,28): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(53,15): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(54,16): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(62,13): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(67,42): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(67,29): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(70,39): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(74,24): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(79,42): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(79,29): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(82,35): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(85,24): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(90,42): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(90,29): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(97,24): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(102,41): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P2\LightEntity.cpp(102,29): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+  WallEntity.cpp
+  ScrollingTextEntity.cpp
+  BeeAnimSpriteEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P4\BeeAnimSpriteEntity.cpp(13,52): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P4\BeeAnimSpriteEntity.cpp(32,31): warning C4244: '-=': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P4\BeeAnimSpriteEntity.cpp(38,21): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P4\BeeAnimSpriteEntity.cpp(43,21): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+  SpriteEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P4\SpriteEntity.cpp(9,52): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P4\SpriteEntity.cpp(29,20): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  BallEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P5\BallEntity.cpp(11,46): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P5\BallEntity.cpp(26,20): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  BeeEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P5\BeeEntity.cpp(10,52): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P5\BeeEntity.cpp(26,20): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  BoxEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P5\BoxEntity.cpp(10,50): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P5\BoxEntity.cpp(25,22): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  CirclePointerEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P5\CirclePointerEntity.cpp(11,46): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P5\CirclePointerEntity.cpp(28,26): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P5\CirclePointerEntity.cpp(28,23): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  Compilando...
+  SquarePointerEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P5\SquarePointerEntity.cpp(12,54): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  BackgroundsEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P6\BackgroundsEntity.cpp(15,43): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P6\BackgroundsEntity.cpp(17,43): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P6\BackgroundsEntity.cpp(19,43): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P6\BackgroundsEntity.cpp(21,43): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P6\BackgroundsEntity.cpp(49,23): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P6\BackgroundsEntity.cpp(52,18): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P6\BackgroundsEntity.cpp(56,18): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P6\BackgroundsEntity.cpp(60,18): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P6\BackgroundsEntity.cpp(64,18): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P6\BackgroundsEntity.cpp(77,20): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P6\BackgroundsEntity.cpp(78,20): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P6\BackgroundsEntity.cpp(93,19): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P6\BackgroundsEntity.cpp(104,19): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+  P6BeeEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P6\P6BeeEntity.cpp(15,52): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P6\P6BeeEntity.cpp(34,31): warning C4244: '-=': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P6\P6BeeEntity.cpp(41,21): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\AdHocEntities\P6\P6BeeEntity.cpp(46,21): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+  P6PlayerEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Audio\AudioSource.h(5,10): fatal  error C1083: No se puede abrir el archivo incluir: 'AL/al.h': No such file or directory
+  CameraEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\Camera\CameraEntity.cpp(39,9): warning C4101: 'a': variable local sin referencia
+  P6CameraEntity.cpp
+  FontEntity.cpp
+  SquareEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\CoreEntities\SquareEntity.cpp(23,48): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\CoreEntities\SquareEntity.cpp(23,29): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  AlienTileEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Audio\AudioSource.h(5,10): fatal  error C1083: No se puede abrir el archivo incluir: 'AL/al.h': No such file or directory
+  OclussionTileEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\CoreEntities\Tiles\OclussionTileEntity.cpp(61,57): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  TileEntity.cpp
+  Entity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\Entity.cpp(35,23): warning C4018: '<': no coinciden signed/unsigned
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\Entity.cpp(118,23): warning C4018: '<': no coinciden signed/unsigned
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\Entity.cpp(120,27): warning C4018: '<': no coinciden signed/unsigned
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\Entity.cpp(154,23): warning C4018: '<': no coinciden signed/unsigned
+  GameCameraEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\GameEntities\Camera\GameCameraEntity.cpp(50,73): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  CoinEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Audio\AudioSource.h(5,10): fatal  error C1083: No se puede abrir el archivo incluir: 'AL/al.h': No such file or directory
+  BoxColliderEntity.cpp
+  Dialogue.cpp
+  DialogueEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Audio\AudioSource.h(5,10): fatal  error C1083: No se puede abrir el archivo incluir: 'AL/al.h': No such file or directory
+  GameOverScreenEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\GameEntities\GameOver\GameOverScreenEntity.cpp(28,30): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\GameEntities\GameOver\GameOverScreenEntity.cpp(29,37): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  ItemDistributorEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Audio\AudioSource.h(5,10): fatal  error C1083: No se puede abrir el archivo incluir: 'AL/al.h': No such file or directory
+  LoadScreenEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\GameEntities\LoadScreenEntity\LoadScreenEntity.cpp(29,30): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\GameEntities\LoadScreenEntity\LoadScreenEntity.cpp(30,37): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  Compilando...
+  MainMenuEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Audio\AudioSource.h(5,10): fatal  error C1083: No se puede abrir el archivo incluir: 'AL/al.h': No such file or directory
+  GameData.cpp
+  HudEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\GameEntities\Player\Hud\HudEntity.cpp(18,89): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\GameEntities\Player\Hud\HudEntity.cpp(111,90): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\GameEntities\Player\Hud\HudEntity.cpp(110,82): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+  PlayerEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Audio\AudioSource.h(5,10): fatal  error C1083: No se puede abrir el archivo incluir: 'AL/al.h': No such file or directory
+  PlayerLightEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Audio\AudioSource.h(5,10): fatal  error C1083: No se puede abrir el archivo incluir: 'AL/al.h': No such file or directory
+  WinScreenEntity.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\GameEntities\WinScreen\WinScreenEntity.cpp(27,30): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Entities\GameEntities\WinScreen\WinScreenEntity.cpp(28,37): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  main.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Audio\AudioSource.h(5,10): fatal  error C1083: No se puede abrir el archivo incluir: 'AL/al.h': No such file or directory
+  Scene.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Audio\AudioSource.h(5,10): fatal  error C1083: No se puede abrir el archivo incluir: 'AL/al.h': No such file or directory
+  SceneManager.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Scenes\SceneManager.cpp(292,29): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Scenes\SceneManager.cpp(295,66): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Scenes\SceneManager.cpp(294,66): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Scenes\SceneManager.cpp(293,66): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Scenes\SceneManager.cpp(299,55): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Scenes\SceneManager.cpp(299,51): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Scenes\SceneManager.cpp(301,17): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+  AudioBuffer.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Audio\AudioSource.h(5,10): fatal  error C1083: No se puede abrir el archivo incluir: 'AL/al.h': No such file or directory
+  AudioSource.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Audio\AudioSource.h(5,10): fatal  error C1083: No se puede abrir el archivo incluir: 'AL/al.h': No such file or directory
+  Listener.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Audio\AudioSource.h(5,10): fatal  error C1083: No se puede abrir el archivo incluir: 'AL/al.h': No such file or directory
+  Camera.cpp
+  CircleCollider.cpp
+  Collider.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Collision\Collider.cpp(71,23): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Collision\Collider.cpp(123,29): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Collision\Collider.cpp(124,29): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Collision\Collider.cpp(125,28): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Collision\Collider.cpp(129,29): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Collision\Collider.cpp(130,29): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Collision\Collider.cpp(131,28): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Collision\Collider.cpp(179,28): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Collision\Collider.cpp(180,28): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Collision\Collider.cpp(181,27): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+  PixelsCollider.cpp
+  RectCollider.cpp
+  DebugElem.cpp
+  DrawDebugUtils.cpp
+  MathUtils.cpp
+  Compilando...
+  Sprite.cpp
+  StopWatch.cpp
+  Text.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Text\Text.cpp(22,27): warning C4018: '<': no coinciden signed/unsigned
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Text\Text.cpp(69,23): warning C4018: '<': no coinciden signed/unsigned
+  Button.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\UI\Button.cpp(9,52): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  Vec2.cpp
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Vec2.cpp(245,40): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Vec2.cpp(256,20): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Utad\Programación 2D\Practicas\The Shopping experience\plantilla\src\Utils\Vec2.cpp(255,20): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos

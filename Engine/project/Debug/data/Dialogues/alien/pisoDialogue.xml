@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dialogue name="CHICO PISO">
+	<text text="Pero a quien tenemos por aqui.Cuanto |tiempo sin verte.Desde que desapareciste |con mi coleccion de tazas no hemos vuelto| a saber nada de ti por el piso. Que pasa?| Te da cosa ir a 		devolverlas? Que crees? |Que te vamos a pegar o algo?"/>
+
+	<option option="cuanto tiempo. Tazas... Que tazas. Yo no tengo ninguna taza de Yoda en mi|casa."/>
+	<option option="cuanto tiempo. Tazas... Que tazas. Yo no tengo ninguna taza de Yoda en mi|casa. He dicho Yoda Mierda. Te prometo que no he visto una taza de las|tuyas nunca. Crees que soy un ladron. No soy un ladron."/>
+	<option option="cuanto tiempo. Tazas... Que tazas. Yo no tengo ninguna taza de Yoda en mi|casa. He dicho Yoda Mierda. Te prometo que no he visto una taza de las|tuyas nunca. No soy un ladron. Yo nunca he robado nada. Yo no soy un|delincuente nunca haria nada. Me vas a denunciar. Por favor no me|denuncies, yo solo he venido a por leche.pero no tengo ninguna taza,|eh. Donde la voy a echar entonces.Para que quiero. leche. Creo que mejor|me voy a casa."/>
+</Dialogue>

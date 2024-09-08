@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dialogue name="cajera" >
+	<text text="Hola, corazon"/>	
+	<text text="te pongo una bolsita?"/>	
+	<text text="No? Ah, vale"/>	
+	<text text="A ver... serian... pues justo lo que llevas|encima!!!"/>	
+	<text text="No tienes monedas mas chiquitas? "/>	
+	<text text="Bueno, no te preocupes."/>	
+	<text text="A ver, cinco y diez veinte, treinta, con|cincuenta..."/>	
+	<text text="Ahi tienes, amor. Buen dia!"/>	
+
+	<option option="muchisimas gracias"/>
+	<option option="perdon me lo puedes repetir"/>
+</Dialogue>
