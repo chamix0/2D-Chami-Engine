@@ -1,8 +1,9 @@
 #include "WinScreenEntity.h"
 #include "../../../Engine_Managers/RenderEngine.h"
 #include "../../../Engine_Managers/LogicManager.h"
+#include "../../../Utils/GameUtils/GameSceneCreationUtils.h"
 
-WinScreenEntity::WinScreenEntity(const Vec2& position, int renderLayer): Entity(position, renderLayer)
+WinScreenEntity::WinScreenEntity(const Vec2& position, int renderLayer) : Entity(position, renderLayer)
 {
     m_LoadingText = new Text("data/Fonts/pixelFont.ttf",
                              "Felicides, saliste del supermercado!!!", 30, Vec2(0.082f, 0.941f, 0.573f));
@@ -49,7 +50,8 @@ void WinScreenEntity::LogicUpdate(double tick)
         logic_manager->GetSceneManager()->DeleteScene("Main_Menu");
 
         //load game
-        logic_manager->SetCurrentScene(logic_manager->GetSceneManager()->GetMainMenu());
+        SceneManager* scene_manager = logic_manager->GetSceneManager();
+        logic_manager->SetCurrentScene(GameSceneCreationUtils::GetMainMenu(*scene_manager));
     }
 }
 

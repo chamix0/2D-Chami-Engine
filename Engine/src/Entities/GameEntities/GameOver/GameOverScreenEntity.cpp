@@ -1,9 +1,10 @@
 #include "GameOverScreenEntity.h"
 #include "../../../Engine_Managers/LogicManager.h"
 #include "../../../Engine_Managers/RenderEngine.h"
+#include "../../../Utils/GameUtils/GameSceneCreationUtils.h"
 #include "../../../Utils/Sprite/Sprite.h"
 
-GameOverScreenEntity::GameOverScreenEntity(const Vec2& position, int renderLayer): Entity(position, renderLayer)
+GameOverScreenEntity::GameOverScreenEntity(const Vec2& position, int renderLayer) : Entity(position, renderLayer)
 {
     m_LoadingText = new Text("data/Fonts/pixelFont.ttf",
                              "GameOver...", 30, Vec2(0.431f, 0.376f, 0.259f));
@@ -50,7 +51,8 @@ void GameOverScreenEntity::LogicUpdate(double tick)
         logic_manager->GetSceneManager()->DeleteScene("Main_Menu");
 
         //load game
-        logic_manager->SetCurrentScene(logic_manager->GetSceneManager()->GetMainMenu());
+        SceneManager* scene_manager = logic_manager->GetSceneManager();
+        logic_manager->SetCurrentScene(GameSceneCreationUtils::GetMainMenu(*scene_manager));
     }
 }
 

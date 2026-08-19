@@ -1,10 +1,27 @@
 ﻿#include "InputManager.h"
-
+#include <windows.h>
+#include <iostream>
 #include "glfw3.h"
+#include "../../Utils/Debug/DrawDebugUtils.h"
 
+
+InputManager* InputManager::inputManagerInstance = nullptr;
+
+
+InputManager* InputManager::GetInstanceInputManager()
+{
+    if (inputManagerInstance == nullptr)
+    {
+        inputManagerInstance = new InputManager();
+    }
+    return inputManagerInstance;
+}
 
 InputManager::InputManager()
 {
+    GLFWwindow* window = glfwGetCurrentContext();
+    glfwSetScrollCallback(window, scroll_func);
+
     //init all the inputs as true so it doesnt detect unwanted pressed inputs when changing scenes
     for (int key : registeredKeyboardInputs)
     {
@@ -24,6 +41,7 @@ void InputManager::UpdateInputs()
     InputThisFrame.clear();
     //process axis
     ProcessAxis();
+
 
     //update keyboard inputs
     for (int key : registeredKeyboardInputs)
@@ -99,10 +117,26 @@ std::string InputManager::GetCurrentAbcKey()
     return currentAbcKey;
 }
 
+void InputManager::OnMouseWheelUp()
+{
+    InputThisFrame.insert(vk_MouseWheelUp);
+    InputsPressed.insert(vk_MouseWheelUp);
+    DrawDebugUtils::AddToLog("wheel up");
+}
+
+void InputManager::OnMouseWheelDown()
+{
+    InputThisFrame.insert(vk_MouseWheelDown);
+    InputsPressed.insert(vk_MouseWheelDown);
+    DrawDebugUtils::AddToLog("wheel down");
+}
+
 void InputManager::ProcessInput(int key, std::set<int>& inputsPressed, std::set<int>& inputsThisFrame)
 {
     if (GetAsyncKeyState(key))
     {
+        //reset mouse wheel
+
         if (!pressed[key])
         {
             //mark as pressed
@@ -234,7 +268,7 @@ void InputManager::ProcessRightJoyStick(XINPUT_STATE& state)
     if (magnitude > GAMEPAD_RIGHT_THUMB_DEADZONE)
     {
         //clip the magnitude at its expected maximum value
-        if (magnitude > 32767) magnitude = 32767;
+        magnitude = std::min<float>(magnitude, 32767);
 
         //adjust magnitude relative to the end of the dead zone
         magnitude -= GAMEPAD_RIGHT_THUMB_DEADZONE;
@@ -256,13 +290,12 @@ void InputManager::ProcessRightTrigger(XINPUT_STATE& state)
 {
     float RT = state.Gamepad.bRightTrigger;
 
-
     float normalizedMagnitude = 0;
     //check if the controller is outside a circular dead zone
     if (RT > GAMEPAD_TRIGGER_THRESHOLD)
     {
         //clip the magnitude at its expected maximum value
-        if (RT > 32767) RT = 32767;
+        RT = std::min<float>(RT, 32767);
 
         //adjust magnitude relative to the end of the dead zone
         RT -= GAMEPAD_TRIGGER_THRESHOLD;
@@ -279,6 +312,20 @@ void InputManager::ProcessRightTrigger(XINPUT_STATE& state)
 
     rightTrigger = normalizedMagnitude;
 }
+
+void InputManager::scroll_func(GLFWwindow* glf_wwindow, double x, double y)
+{
+    // yoffset tracks vertical scrolling
+    if (y > 0)
+    {
+        GetInstanceInputManager()->OnMouseWheelUp();
+    }
+    else if (y < 0)
+    {
+        GetInstanceInputManager()->OnMouseWheelDown();
+    }
+}
+
 
 void InputManager::ProcessLeftTrigger(XINPUT_STATE& state)
 {

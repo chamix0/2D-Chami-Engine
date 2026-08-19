@@ -4,6 +4,9 @@
 #include "Engine_Managers/LogicManager.h"
 #include "Engine_Managers/TimeManager.h"
 #include "Engine_Managers/Input/InputManager.h"
+#include "Utils/GameUtils/DEFINES_ENGINE.h"
+#include "Utils/Debug/DrawDebugUtils.h"
+
 
 using namespace std;
 
@@ -14,15 +17,18 @@ int main()
 
     //Game logic stuff
     TimeManager timer(1);
-    InputManager input_manager = InputManager();
     LogicManager* logicManager = LogicManager::GetInstanceLogicManager();
     RenderEngine* renderEngine = RenderEngine::GetInstanceRenderEngine();
     AudioManager* audioManager = AudioManager::GetInstanceAudioManager();
 
     //initialization
+    DrawDebugUtils::ClearLog(); //clear log
     audioManager->Init();
     renderEngine->Init();
     logicManager->Init();
+    
+    //input manager needs to be created after render engine because of the mouse wheel event
+    InputManager* input_manager = InputManager::GetInstanceInputManager();
 
     //get current window
     GLFWwindow* window = glfwGetCurrentContext(); //window reference
@@ -31,7 +37,7 @@ int main()
     while (!glfwWindowShouldClose(window))
     {
         //read player input
-        logicManager->UpdateInputs(&input_manager);
+        logicManager->UpdateInputs(input_manager);
 
         //update game logic
         logicManager->UpdateGameLogic(timer);

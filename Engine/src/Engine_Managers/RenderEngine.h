@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include "../Utils/Debug/DebugElem.h"
+#include "../Utils/ObserverPattern/Subject.h"
 
 
 class Sprite;
@@ -13,14 +14,18 @@ class Font;
 class TimeManager;
 class Vec2;
 
-class RenderEngine
+class RenderEngine: public Subject
 {
 private:
     static RenderEngine* renderInstance; //singleton instance
-    int WINDOW_WITH = 800;
-    int WINDOW_HEIGHT = 800;
+    int WINDOW_WITH = 800; //Executable window width
+    int WINDOW_HEIGHT = 800; // Executable window height
+
+    //texture library
     std::map<std::string, ltex_t*> textures;
+    //font library
     std::map<std::string, Font*> fonts;
+    //debug elements
     std::vector<DebugElem> drawDebugElems;
 
 public:
@@ -56,13 +61,12 @@ public:
     /// \param texture 
     void UnLoadTexture(ltex_t* texture);
 
-    int GetScreenWidth();
-    int GetScreenHeight();
-    Vec2 GetScreenCenter();
-    Vec2 GetScreenPos();
+    int GetScreenWidth() const;
+    int GetScreenHeight() const;
+    Vec2 GetScreenCenter() const;
+    Vec2 GetScreenPos() const;
     void AddDebug(DebugElem elem);
     void DrawDebug();
-
     bool IsRectInScreen(const Vec2 spritePos, const Vec2& spriteSize);
 
 private:

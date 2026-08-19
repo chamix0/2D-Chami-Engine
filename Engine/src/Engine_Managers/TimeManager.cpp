@@ -2,6 +2,8 @@
 
 #include <glfw3.h>
 
+#include "../Utils/MathUtils.h"
+
 TimeManager::TimeManager(double iTimeScale) : timeScale(iTimeScale)
 {
     prevTime = GetTime();
@@ -21,10 +23,7 @@ void TimeManager::InitSlotsToProcess()
     prevTime = currentTime;
 
     // to fix the dead loop
-    if (deltaTime >= deadLoopTick)
-    {
-        deltaTime = deadLoopTick;
-    }
+    deltaTime = MathUtils::Min(deltaTime, deadLoopTick);
 }
 
 bool TimeManager::ProcessSlots()

@@ -6,10 +6,11 @@
 #include "../../../Engine_Managers/LogicManager.h"
 #include "../../../Utils/MathUtils.h"
 #include "../../../Utils/Debug/DrawDebugUtils.h"
+#include "../../../Utils/GameUtils/GameSceneCreationUtils.h"
 
 AlienTileEntity::AlienTileEntity(Vec2 position, int renderLayer, std::string tag, std::string path, int numCols,
                                  int numRows,
-                                 int id): TileEntity(position, renderLayer, tag, path, numCols, numRows, id)
+                                 int id) : TileEntity(position, renderLayer, tag, path, numCols, numRows, id)
 {
     //create  sprite
     m_tileSprite = new Sprite(path, numCols, numRows, Vec2(1), BLEND_ALPHA,
@@ -94,12 +95,12 @@ void AlienTileEntity::LogicLateUpdate(double tick)
             stop_watch.ReStart();
 
             //load game
+            SceneManager* scene_manager = LogicManager::GetInstanceLogicManager()->GetSceneManager();
             LogicManager::GetInstanceLogicManager()->SetCurrentScene(
-                LogicManager::GetInstanceLogicManager()->GetSceneManager()->GetDialogueLevel(1, GetDifficulty()));
+                GameSceneCreationUtils::GetDialogueLevel(*scene_manager, 1, GetDifficulty()));
         }
 
         //move alien
-
         if (stop_watch.GetElapsedSeconds() >= cooldown)
         {
             float gain = 1 - MathUtils::Clamp(MathUtils::NormalizeBetweenValues(distance, m_minDistance, m_maxDistance),

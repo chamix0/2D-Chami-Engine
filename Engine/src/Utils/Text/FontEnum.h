@@ -4,7 +4,7 @@ enum FONTS
     ORANGE = 0,
     SLAPT_STICK_COMIC,
     RETRO_GAMING,
-    COUNT
+    FONTS_COUNT
 };
 
 inline const char* FONTS_TO_STRING(FONTS font)

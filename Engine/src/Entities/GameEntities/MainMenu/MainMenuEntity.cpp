@@ -6,11 +6,12 @@
 #include "../../../Engine_Managers/RenderEngine.h"
 #include "../../../Scenes/SceneManager.h"
 #include "../../../Utils/MathUtils.h"
+#include "../../../Utils/GameUtils/GameSceneCreationUtils.h"
 #include "../../../Utils/Sprite/Sprite.h"
 #include "../../../Utils/UI/Button.h"
 #include "../Dialogue/DialogueEntity.h"
 
-MainMenuEntity::MainMenuEntity(Vec2 position, int renderlayer): Entity(position, renderlayer, "main_menu")
+MainMenuEntity::MainMenuEntity(Vec2 position, int renderlayer) : Entity(position, renderlayer, "main_menu")
 {
     //background
     BackgroundSprite = new Sprite("data/Game/UI/MainMenuBackground.png", 1, 1, Vec2(1), BLEND_SOLID,
@@ -60,7 +61,7 @@ void MainMenuEntity::BeginPlay()
 {
     //clean the game data
     LogicManager::GetInstanceLogicManager()->GetSceneManager()->DeleteAllScenes("Main_Menu");
-    
+
     //highlight first button    
     HiglightButton(buttonindex);
     //start playing sound
@@ -149,12 +150,10 @@ void MainMenuEntity::AcceptAction()
     //do button actions
     if (buttonindex == 0)
     {
+        SceneManager* scene_manager = LogicManager::GetInstanceLogicManager()->GetSceneManager();
         LogicManager::GetInstanceLogicManager()->SetCurrentScene(
-            LogicManager::GetInstanceLogicManager()->GetSceneManager()->GetDialogueLevel(
-                DialogueType::START_DIALOGUE, 0));
+            GameSceneCreationUtils::GetDialogueLevel(*scene_manager, DialogueType::START_DIALOGUE, 0));
 
-        // LogicManager::GetInstanceLogicManager()->SetCurrentScene(
-        //     LogicManager::GetInstanceLogicManager()->GetSceneManager()->GetGameLevel());
 
         backgroundSounds->stop();
     }

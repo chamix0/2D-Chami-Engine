@@ -3,15 +3,13 @@ class TimeManager
 {
 private:
     //constants
-    // double li; //used to measure time
-    // double pcFrequency = 0.0;
     const double fixedTick = 1.0 / 60.0;
     const double deadLoopTick = 1.0 / 15.0;
 
     //variables
     double prevTime, currentTime = 0;
     double deltaTime = 0; //accumulated time
-    double FPS = 0;
+    double FPS = 0; //frames per second
     double totalTime = 0.0; //real time
     double logicTime = 0.0; //time inside the game
     double timeScale = 1.0; //speed of the game
@@ -35,9 +33,10 @@ public:
     double GetTotalTime() const;
     double GetLogicTime() const;
     double GetFps() const;
-    double GetTimeScale() const;
     void SetTimeScale(double value);
+    double GetTimeScale() const;
 
 private:
+    //get real time
     double GetTime();
 };

@@ -23,8 +23,13 @@ public:
     static int GetSign(float value);
 
     static float Clamp(float value, float min, float max);
+    static float Min(int val1, int val2);
+    static float Max(int val1, int val2);
     static float Min(float val1, float val2);
     static float Max(float val1, float val2);
+    
+    static float Min(double val1, double val2);
+    static float Max(double val1, double val2);
     static Vec2 GetCollisionIntersection(const Vec2 rectPos1, const Vec2 rectSize1, const Vec2 rectPos2,
                                          const Vec2 rectSize2);
 

@@ -7,10 +7,21 @@
 #define GAMEPAD_RIGHT_THUMB_DEADZONE 8689
 #define GAMEPAD_TRIGGER_THRESHOLD    5
 
+//mouse
+const int vk_MouseWheelUp = -1000;
+const int vk_MouseWheelDown = -1001;
+
+const int vk_LMouseButton = 1;
+const int vk_RMouseButton = 2;
+const int vk_MiddelMouseButton = 4;
+const int vk_XMouseButton1 = 5;
+const int vk_XMouseButton2 = 6;
+
+//keyboard
+
 const int vk_BackSpace = 8;
 const int vk_Tab = 9;
 const int vk_Return = 13;
-// const int vk_Shift = 16;
 const int vk_Control = 17;
 const int vk_Alt = 18;
 const int vk_Pause = 19;

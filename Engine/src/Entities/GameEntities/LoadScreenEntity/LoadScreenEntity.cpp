@@ -2,6 +2,7 @@
 
 #include "../../../Engine_Managers/LogicManager.h"
 #include "../../../Engine_Managers/RenderEngine.h"
+#include "../../../Utils/GameUtils/GameSceneCreationUtils.h"
 #include "../../../Utils/Sprite/Sprite.h"
 
 LoadScreenEntity::LoadScreenEntity(const Vec2& position, int renderLayer): Entity(position, renderLayer)
@@ -46,7 +47,8 @@ void LoadScreenEntity::LogicUpdate(double tick)
     {
         //load game
         LogicManager* logic_manager = LogicManager::GetInstanceLogicManager();
-        logic_manager->SetCurrentScene(logic_manager->GetSceneManager()->GetGameLevel());
+        SceneManager* scene_manager = logic_manager->GetSceneManager();
+        logic_manager->SetCurrentScene(GameSceneCreationUtils::GetGameLevel(*scene_manager));
     }
 }
 

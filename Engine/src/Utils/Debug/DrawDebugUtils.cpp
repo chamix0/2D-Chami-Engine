@@ -3,6 +3,8 @@
 #include "DebugElem.h"
 #include "../Camera.h"
 #include "../../Engine_Managers/LogicManager.h"
+#include "../GameUtils/DEFINES_ENGINE.h"
+
 #include "../../Engine_Managers/RenderEngine.h"
 
 void DrawDebugUtils::DrawDebugPoint(Vec2 pos, Vec2 color)
@@ -50,4 +52,62 @@ void DrawDebugUtils::DrawDebugOval(Vec2 pos, Vec2 size, Vec2 color)
     RenderEngine* render_engine = RenderEngine::GetInstanceRenderEngine();
     Vec2 position = LogicManager::GetInstanceLogicManager()->GetCamera()->WorldPosToScreen(pos - size);
     render_engine->AddDebug(DebugElem(DebugType_OVAL, position, Vec2(), size * 2, Vec2(), color));
+}
+
+int DrawDebugUtils::AddToLog(std::string text)
+{
+#ifdef ADD_LOGS
+    FILE* archivo = fopen("LOG.txt", "a");
+
+    if (archivo == NULL)
+    {
+        printf("File could not be opened.\n");
+        return 1;
+    }
+
+    //add text to log with a time stamp at the start
+    fprintf(archivo, "%s %s \n", GetCurrentDateTimeStamp().c_str(), text.c_str());
+
+    fclose(archivo);
+#endif
+
+    return 0;
+}
+
+int DrawDebugUtils::ClearLog()
+{
+    FILE* archivo = fopen("LOG.txt", "w");
+
+    if (archivo == NULL)
+    {
+        printf("File could not be opened.\n");
+        return 1;
+    }
+
+    fprintf(archivo, "");
+
+    fclose(archivo);
+    return 0;
+}
+
+std::string DrawDebugUtils::GetCurrentDateTimeStamp()
+{
+    time_t timestamp = time(&timestamp);
+    return GetTimeToStamp(timestamp);
+}
+
+time_t DrawDebugUtils::GetCurrentRealTime()
+{
+    return time(NULL);
+}
+
+std::string DrawDebugUtils::GetTimeToStamp(time_t time)
+{
+    tm datetime = *localtime(&time);
+
+    std::string text = "[" + std::to_string(datetime.tm_mday) + "/" + std::to_string(datetime.tm_mon + 1) + "/" +
+        std::to_string(
+            datetime.tm_year + 1900) + " " + std::to_string(datetime.tm_hour) + ":" + std::to_string(datetime.tm_min) +
+        "." + std::to_string(datetime.tm_sec) + "]";
+    return text;
 }

@@ -7,10 +7,11 @@
 #include "../../../Engine_Managers/LogicManager.h"
 #include "../../../Engine_Managers/RenderEngine.h"
 #include "../../../Utils/MathUtils.h"
+#include "../../../Utils/GameUtils/GameSceneCreationUtils.h"
 #include "../../../Utils/Sprite/Sprite.h"
 #include "../../../Utils/Text/Text.h"
 
-DialogueEntity::DialogueEntity(Vec2 position, int renderlayer): Entity(position, renderlayer)
+DialogueEntity::DialogueEntity(Vec2 position, int renderlayer) : Entity(position, renderlayer)
 {
     //background
     m_BackgroundSprite = new Sprite("data/Game/UI/purpleTile.png", 1, 1, Vec2(1), BLEND_SOLID,
@@ -113,7 +114,9 @@ void DialogueEntity::InputUpdate(InputManager* input_manager)
         {
             if (result == -1) { return; }
             LogicManager* logic_manager = LogicManager::GetInstanceLogicManager();
-            logic_manager->SetCurrentScene(logic_manager->GetSceneManager()->GetGameLevel());
+
+            SceneManager* scene_manager = logic_manager->GetSceneManager();
+            logic_manager->SetCurrentScene(GameSceneCreationUtils::GetGameLevel(*scene_manager));
             return;
         }
 
@@ -124,14 +127,17 @@ void DialogueEntity::InputUpdate(InputManager* input_manager)
             if (dialogueType == CASHIER_DIALOGUE)
             {
                 LogicManager* logic_manager = LogicManager::GetInstanceLogicManager();
+                SceneManager* scene_manager = logic_manager->GetSceneManager();
+
                 logic_manager->SetCurrentScene(m_difficulty == -1
-                                                   ? logic_manager->GetSceneManager()->GetGameLevel()
-                                                   : logic_manager->GetSceneManager()->GameWinLevel());
+                                                   ? GameSceneCreationUtils::GetGameLevel(*scene_manager)
+                                                   : GameSceneCreationUtils::GameWinLevel(*scene_manager));
             }
             else
             {
                 LogicManager* logic_manager = LogicManager::GetInstanceLogicManager();
-                logic_manager->SetCurrentScene(logic_manager->GetSceneManager()->LoadingGameLevel());
+                SceneManager* scene_manager = logic_manager->GetSceneManager();
+                logic_manager->SetCurrentScene(GameSceneCreationUtils::LoadingGameLevel(*scene_manager));
             }
         }
         else if (result == 1)
@@ -217,8 +223,9 @@ void DialogueEntity::LogicUpdate(double tick)
         if (m_stopWatch.GetElapsedSeconds() > maxTime + maxTime * m_difficulty)
         {
             //load game over screen
+            SceneManager* scene_manager = LogicManager::GetInstanceLogicManager()->GetSceneManager();
             LogicManager::GetInstanceLogicManager()->SetCurrentScene(
-                LogicManager::GetInstanceLogicManager()->GetSceneManager()->GameOverLevel());
+                GameSceneCreationUtils::GameOverLevel(*scene_manager));
         }
     }
 }

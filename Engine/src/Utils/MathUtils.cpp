@@ -100,12 +100,32 @@ float MathUtils::Clamp(float value, float min, float max)
     return value;
 }
 
+float MathUtils::Min(int val1, int val2)
+{
+    return val1 < val2 ? val1 : val2;
+}
+
+float MathUtils::Max(int val1, int val2)
+{
+    return val1 > val2 ? val1 : val2;
+}
+
 float MathUtils::Min(float val1, float val2)
 {
     return val1 < val2 ? val1 : val2;
 }
 
 float MathUtils::Max(float val1, float val2)
+{
+    return val1 > val2 ? val1 : val2;
+}
+
+float MathUtils::Min(double val1, double val2)
+{
+    return val1 < val2 ? val1 : val2;
+}
+
+float MathUtils::Max(double val1, double val2)
 {
     return val1 > val2 ? val1 : val2;
 }

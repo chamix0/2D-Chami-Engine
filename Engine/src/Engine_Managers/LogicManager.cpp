@@ -5,6 +5,8 @@
 #include "TimeManager.h"
 #include "../Entities/CoreEntities/SquareEntity.h"
 #include "../Entities/CoreEntities/FontEntity.h"
+#include "../Utils/GameUtils/DEFINES_ENGINE.h"
+#include "../Utils/GameUtils/GameSceneCreationUtils.h"
 
 
 LogicManager* LogicManager::logicInstance = nullptr;
@@ -22,32 +24,11 @@ LogicManager* LogicManager::GetInstanceLogicManager()
 
 void LogicManager::Init()
 {
-    //prueba de inputs
-    // currentScene = sceneManager.LoadInputsScene();
+    //load save data
+    saveData = SaveData::LoadSave_Deserialize(SAVE_FILE_NAME);
 
-    //practica 1
-    // currentScene = sceneManager.LoadP1Scene();
-
-    //practica 2
-    // currentScene = sceneManager.LoadP2Scene();
-
-    //practica 3
-    // currentScene = sceneManager.LoadP3Scene();
-
-    //practica 4
-    // currentScene = sceneManager.LoadP4Scene();
-
-    //practica 5
-    // currentScene = sceneManager.LoadP5Scene();
-
-    //practica 6
-    // currentScene = sceneManager.LoadP6Scene();
-
-    //practica 7
-    // currentScene = sceneManager.GetP7Scene();
-
-    //main menu
-    SetCurrentScene(sceneManager.GetMainMenu());
+    //Open first Scene
+    SetCurrentScene(GameSceneCreationUtils::GetMainMenu(sceneManager));
 }
 
 void LogicManager::UpdateInputs(InputManager* input_manager)
@@ -233,6 +214,25 @@ void LogicManager::ExitAplication()
 
     //close the window
     glfwSetWindowShouldClose(window, 1);
+}
+
+SaveData* LogicManager::GetSaveData()
+{
+    return &saveData;
+}
+
+void LogicManager::SaveData()
+{
+    //update save date
+    time_t time = DrawDebugUtils::GetCurrentRealTime();
+    saveData.SetSaveDate(time);
+
+    //write file
+    saveData.SaveToFile_Serialize(SAVE_FILE_NAME);
+    DrawDebugUtils::AddToLog("Data saved at " + DrawDebugUtils::GetTimeToStamp(saveData.GetSaveDate()));
+
+    //notify observers
+    NotifyObservers(GAME_SAVED);
 }
 
 

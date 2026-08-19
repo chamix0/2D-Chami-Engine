@@ -26,10 +26,14 @@ public:
     ~Scene();
 
     std::map<int, std::vector<Entity*>> GetEntities();
+    
     std::vector<Entity*> GetEntitiesArray();
+    
     void InitScene();
+    
     /// \brief Looks for all the marked entities and deletes them
     void RemoveMarkedEntities();
+    
     /// \brief add an entity to the scene
     /// \param entity 
     void AddEntity(Entity* entity);
@@ -40,16 +44,19 @@ public:
 
     void IterateLayers(pugi::xml_node mapNode, std::string imagePath, int firstID, int tileSize, int numTileSetCols,
                        int numTileSetRows);
+    
     void IterateObjects(pugi::xml_node mapNode);
+    
     /// \brief loads a map from an tmx
     /// \param path 
     /// \return aa
     /// 
     void LoadTileMap(std::string path);
     bool GetLoaded();
-    PlayerEntity* GetPlayer() { return m_player; };
+    PlayerEntity* GetPlayer() const;;
 
 private:
     bool RemoveEntity(Entity* entity);
+    
     void SetNeighbors(int numCol, int numRows, std::vector<TileEntity*> tileMap, std::vector<TileEntity*> tiles);
 };

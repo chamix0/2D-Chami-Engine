@@ -40,6 +40,7 @@
     <ClInclude Include="..\src\Engine_Managers\Input\JoyStickValue.h" />
     <ClInclude Include="..\src\Engine_Managers\LogicManager.h" />
     <ClInclude Include="..\src\Engine_Managers\RenderEngine.h" />
+    <ClInclude Include="..\src\Engine_Managers\SaveSystem\SaveData.h" />
     <ClInclude Include="..\src\Engine_Managers\TimeManager.h" />
     <ClInclude Include="..\src\Entities\CoreEntities\FontEntity.h" />
     <ClInclude Include="..\src\Entities\CoreEntities\SquareEntity.h" />
@@ -74,7 +75,12 @@
     <ClInclude Include="..\src\Utils\Collision\RectCollider.h" />
     <ClInclude Include="..\src\Utils\Debug\DebugElem.h" />
     <ClInclude Include="..\src\Utils\Debug\DrawDebugUtils.h" />
+    <ClInclude Include="..\src\Utils\GameUtils\DEFINES_ENGINE.h" />
+    <ClInclude Include="..\src\Utils\GameUtils\GameSceneCreationUtils.h" />
+    <ClInclude Include="..\src\Utils\GameUtils\MyEnums.h" />
     <ClInclude Include="..\src\Utils\MathUtils.h" />
+    <ClInclude Include="..\src\Utils\ObserverPattern\Observer.h" />
+    <ClInclude Include="..\src\Utils\ObserverPattern\Subject.h" />
     <ClInclude Include="..\src\Utils\Sprite\Sprite.h" />
     <ClInclude Include="..\src\Utils\StopWatch.h" />
     <ClInclude Include="..\src\Utils\Text\Font.h" />
@@ -90,6 +96,7 @@
     <ClCompile Include="..\src\Engine_Managers\Input\JoyStickValue.cpp" />
     <ClCompile Include="..\src\Engine_Managers\LogicManager.cpp" />
     <ClCompile Include="..\src\Engine_Managers\RenderEngine.cpp" />
+    <ClCompile Include="..\src\Engine_Managers\SaveSystem\SaveData.cpp" />
     <ClCompile Include="..\src\Engine_Managers\TimeManager.cpp" />
     <ClCompile Include="..\src\Entities\CoreEntities\FontEntity.cpp" />
     <ClCompile Include="..\src\Entities\CoreEntities\SquareEntity.cpp" />
@@ -201,7 +208,12 @@
     <ClCompile Include="..\src\Utils\Collision\RectCollider.cpp" />
     <ClCompile Include="..\src\Utils\Debug\DebugElem.cpp" />
     <ClCompile Include="..\src\Utils\Debug\DrawDebugUtils.cpp" />
+    <ClCompile Include="..\src\Utils\GameUtils\DEFINES_ENGINE.cpp" />
+    <ClCompile Include="..\src\Utils\GameUtils\GameSceneCreationUtils.cpp" />
+    <ClCompile Include="..\src\Utils\GameUtils\MyEnums.cpp" />
     <ClCompile Include="..\src\Utils\MathUtils.cpp" />
+    <ClCompile Include="..\src\Utils\ObserverPattern\Observer.cpp" />
+    <ClCompile Include="..\src\Utils\ObserverPattern\Subject.cpp" />
     <ClCompile Include="..\src\Utils\Sprite\Sprite.cpp" />
     <ClCompile Include="..\src\Utils\StopWatch.cpp" />
     <ClCompile Include="..\src\Utils\Text\Font.cpp">

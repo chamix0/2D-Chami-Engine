@@ -209,22 +209,22 @@ void RenderEngine::UnLoadTexture(ltex_t* texture)
 }
 
 
-int RenderEngine::GetScreenWidth()
+int RenderEngine::GetScreenWidth() const
 {
     return WINDOW_WITH;
 }
 
-int RenderEngine::GetScreenHeight()
+int RenderEngine::GetScreenHeight()const
 {
     return WINDOW_HEIGHT;
 }
 
-Vec2 RenderEngine::GetScreenCenter()
+Vec2 RenderEngine::GetScreenCenter()const
 {
     return Vec2(static_cast<float>(WINDOW_WITH) / 2.f, static_cast<float>(WINDOW_HEIGHT) / 2.f);
 }
 
-Vec2 RenderEngine::GetScreenPos()
+Vec2 RenderEngine::GetScreenPos() const
 {
     GLFWwindow* window = glfwGetCurrentContext(); //window reference
     int x, y;

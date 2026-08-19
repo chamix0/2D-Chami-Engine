@@ -2,10 +2,11 @@
 #include "../../../Utils/Sprite/Sprite.h"
 #include "../../../Engine_Managers/LogicManager.h"
 #include "../../../Utils/MathUtils.h"
+#include "../../../Utils/GameUtils/GameSceneCreationUtils.h"
 #include "../Dialogue/DialogueEntity.h"
 
-CashierEntity::CashierEntity(Vec2 position, int renderLayer): Entity(
-                                                                  position, renderLayer, "cashier"), m_Player(nullptr)
+CashierEntity::CashierEntity(Vec2 position, int renderLayer) : Entity(
+                                                                   position, renderLayer, "cashier"), m_Player(nullptr)
 {
     //machine text
     m_machineText = new Text("data/Fonts/Bubbleboddy.ttf", "Caja", 13, Vec2(0, 1, 0));
@@ -51,9 +52,10 @@ void CashierEntity::InputUpdate(InputManager* input_manager)
             CheckInstantInput(GAMEPAD_SOUTH);
         if (inputSelect)
         {
-            LogicManager::GetInstanceLogicManager()->SetCurrentScene(
-                LogicManager::GetInstanceLogicManager()->GetSceneManager()->GetDialogueLevel(CASHIER_DIALOGUE,
-                    m_Player->m_gameData.AllItemsCollected() ? m_Player->m_gameData.GetNumCoins() : -1));
+            SceneManager* scene_manager = LogicManager::GetInstanceLogicManager()->GetSceneManager();
+            LogicManager::GetInstanceLogicManager()->SetCurrentScene(GameSceneCreationUtils::GetDialogueLevel(
+                *scene_manager, CASHIER_DIALOGUE,
+                m_Player->m_gameData.AllItemsCollected() ? m_Player->m_gameData.GetNumCoins() : -1));
         }
     }
 }

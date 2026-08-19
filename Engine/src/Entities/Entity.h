@@ -6,11 +6,12 @@
 
 #include "../Engine_Managers/Input/InputManager.h"
 #include "../Utils/Vec2.h"
+#include "../Utils/ObserverPattern/Observer.h"
 
 
 class Sprite;
 
-class Entity
+class Entity: public Observer
 {
 protected:
     int m_renderLayer;

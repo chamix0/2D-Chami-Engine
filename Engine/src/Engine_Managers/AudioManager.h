@@ -6,12 +6,13 @@
 #include "../Utils/Vec2.h"
 #include "../Utils/Audio/AudioBuffer.h"
 #include "../../openal/AL/alc.h"
+#include "../Utils/ObserverPattern/Subject.h"
 
 
 class Vec2;
 
 
-class AudioManager
+class AudioManager : public Subject
 {
 private:
     //singleton
@@ -44,5 +45,4 @@ private:
     char* loadWAV(std::string fn, int& chan, int& samplerate, int& bps, int& size);
     bool isBigEndian();
     int convertToInt(char* buffer, int len);
-
 };

@@ -4,19 +4,22 @@
 #include "../Entities/Entity.h"
 #include "../Scenes/Scene.h"
 #include "../Scenes/SceneManager.h"
+#include "../Utils/ObserverPattern/Subject.h"
 #include "Input/InputManager.h"
+#include "SaveSystem/SaveData.h"
 
 
 class TimeManager;
 class MyEntity;
 
-class LogicManager
+class LogicManager : public Subject
 {
 private:
     static LogicManager* logicInstance; //singleton instance
     Scene* currentScene = nullptr;
     TimeManager* timeManager;
     SceneManager sceneManager;
+    SaveData saveData;
 
 public:
     /// \brief Singleton
@@ -67,7 +70,9 @@ public:
     /// 
     void ExitAplication();
 
+    // SAVE DATA
+    SaveData* GetSaveData();
+    void SaveData();
 
 private:
-
 };

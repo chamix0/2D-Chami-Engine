@@ -4,11 +4,16 @@
 #include <string>
 #include <unordered_map>
 
+#include "glfw3.h"
 #include "InputKeys.h"
 #include "JoyStickValue.h"
+#include "../../Utils/ObserverPattern/Subject.h"
 
-class InputManager
+
+class InputManager : public Subject
 {
+    static InputManager* inputManagerInstance; //singleton instance
+
 private:
     std::unordered_map<int, std::string> abecedaryMap = {
         {vk_0, "0"}, {vk_1, "1"}, {vk_2, "2"}, {vk_3, "3"}, {vk_4, "4"}, {vk_5, "5"},
@@ -19,6 +24,10 @@ private:
         {vk_Comma, ","}, {vk_Period, "."}, {vk_Apostrophe, "Apostrophe"}, {VK_SPACE, " "}
     };
     std::unordered_map<int, std::string> vkMap = {
+        {vk_MouseWheelDown, "Mouse Wheel down"}, {vk_MouseWheelUp, "Mouse Wheel up"},
+        {vk_LMouseButton, "Left Mouse Button"}, {vk_RMouseButton, "Right Mouse Button"},
+        {vk_MiddelMouseButton, "Middle Mouse Button"}, {vk_XMouseButton1, "x1 Mouse Button"},
+        {vk_XMouseButton2, "x2 Mouse Button"},
         {vk_BackSpace, "BackSpace"}, {vk_Tab, "Tab"}, {vk_Return, "Return"},
         {vk_Control, "Control"},
         {vk_Alt, "Alt"}, {vk_Pause, "Pause"}, {vk_CapsLock, "CapsLock"}, {vk_Escape, "Escape"}, {vk_Space, "Space"},
@@ -50,7 +59,8 @@ private:
         {GAMEPAD_RIGHT_THUMB, "GAMEPAD_RIGHT_THUMB"},
     };
 
-    const int registeredKeyboardInputs[68] = {
+    const int registeredKeyboardInputs[75] = {vk_MouseWheelDown, vk_MouseWheelUp,
+        vk_LMouseButton, vk_RMouseButton, vk_MiddelMouseButton, vk_XMouseButton1, vk_XMouseButton2,
         vk_BackSpace, vk_Tab, vk_Return, vk_Control, vk_Alt, vk_Pause, vk_CapsLock, vk_Escape, vk_Space,
         vk_Left, vk_Up, vk_Right, vk_Down, vk_PrintScreen, vk_Insert,
         vk_Delete, vk_Period,
@@ -78,6 +88,7 @@ private:
     float leftTrigger = 0.f;
 
 public:
+    static InputManager* GetInstanceInputManager();
     InputManager();
     void UpdateInputs();
     std::set<int> GetPressedInputs() const;
@@ -104,6 +115,8 @@ public:
     std::string GetCurrentAbcKey();
 
 private:
+    void OnMouseWheelUp();
+    void OnMouseWheelDown();
     void ProcessInput(int key, std::set<int>& inputsPressed, std::set<int>& inputsThisFrame);
     void ProcessInputGamepad(int key, std::set<int>& inputsPressed, std::set<int>& inputsThisFrame);
     void ProcessAxis();
@@ -111,4 +124,5 @@ private:
     void ProcessRightJoyStick(XINPUT_STATE& state);
     void ProcessLeftTrigger(XINPUT_STATE& state);
     void ProcessRightTrigger(XINPUT_STATE& state);
+    static void scroll_func(GLFWwindow* glf_wwindow, double x, double arg);
 };

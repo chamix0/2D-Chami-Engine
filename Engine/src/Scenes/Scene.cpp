@@ -13,7 +13,7 @@
 #include "../Utils/Sprite/Sprite.h"
 
 
-Scene::Scene(/*World* world,*/ std::map<int, std::vector<Entity*>> entities):
+Scene::Scene(/*World* world,*/ std::map<int, std::vector<Entity*>> entities) :
     entities(entities)
 {
     camera = new Camera();
@@ -331,6 +331,11 @@ void Scene::LoadTileMap(std::string path)
 bool Scene::GetLoaded()
 {
     return loaded;
+}
+
+PlayerEntity* Scene::GetPlayer() const
+{
+    return m_player;
 }
 
 void Scene::RemoveMarkedEntities()
