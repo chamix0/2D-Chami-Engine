@@ -11,16 +11,51 @@
 #include "../../../Utils/UI/Button.h"
 #include "../Dialogue/DialogueEntity.h"
 
+void MainMenuEntity::CreateBackground()
+{
+    RenderEngine* render_engine = RenderEngine::GetInstanceRenderEngine();
+    //background
+    std::vector<Sprite*> m_sprites;
+    float tileSize = 32;
+    float halfTileSize = tileSize / 2.f;
+    int numSquaresWidth = render_engine->GetScreenWidth() / tileSize;
+    int numSquaresHeight = render_engine->GetScreenHeight() / tileSize;
+
+    Vec2 colorWhite = Vec2(1);
+    Vec2 colorBlack = Vec2(43.f / 255.f, 47 / 255.f, 51 / 255.f);
+
+    for (int x = 0; x < numSquaresWidth; ++x)
+    {
+        for (int y = 0; y < numSquaresHeight; ++y)
+        {
+            int color = x % 2 == 0 ? 1 : 0;
+            color = y % 2 == 0 ? color : (color + 1) % 2;
+
+            Sprite* BackgroundTile = new Sprite("data/Sprites/pixel.png", 1, 1,
+                                                Vec2(color == 0 ? colorWhite : colorBlack), BLEND_SOLID,
+                                                Vec2(tileSize), Vec2(0.5f, 0.5f), 0.f, CollisionType::NONE, UI);
+            BackgroundTile->m_position = Vec2(tileSize * x + halfTileSize, tileSize * y + halfTileSize);
+            AddSprite(BackgroundTile);
+        }
+    }
+}
+
 MainMenuEntity::MainMenuEntity(Vec2 position, int renderlayer) : Entity(position, renderlayer, "main_menu")
 {
-    //background
-    BackgroundSprite = new Sprite("data/Game/UI/MainMenuBackground.png", 1, 1, Vec2(1), BLEND_SOLID,
-                                  Vec2(8), Vec2(0.5f, 0.5f), 0.f, CollisionType::NONE, UI);
-    AddSprite(BackgroundSprite);
+    RenderEngine* render_engine = RenderEngine::GetInstanceRenderEngine();
+    CreateBackground();
+
 
     //tittle text
-    tittleText = new Text("data/Fonts/Bubbleboddy.ttf", "The Average Shopping|Experience", 60,
-                          Vec2(0));
+    tittleText = new Text("data/Fonts/ChessTextFont.ttf", "A SIMPLE CHESS GAME", 60,
+                          Vec2(1, 0.5, 0));
+    tittleText->SetPosition(Vec2(render_engine->GetScreenCenter().x - 290, 205));
+
+    Sprite* TitleBackground = new Sprite("data/Sprites/pixel.png", 1, 1,
+                                         Vec2(1), BLEND_SOLID,
+                                         Vec2(610, 70), Vec2(0.5f, 0.5f), 0.f, CollisionType::NONE, UI);
+    TitleBackground->m_position = render_engine->GetScreenCenter() + Vec2(0, -215);
+    AddSprite(TitleBackground);
 
     //buttons
     ButtonPlay = new Button("data/Game/UI/PlayButton.png", "data/Fonts/pixelFont.ttf", 32);
@@ -64,19 +99,26 @@ void MainMenuEntity::BeginPlay()
 
     //highlight first button    
     HiglightButton(buttonindex);
+
     //start playing sound
-    backgroundSounds->PlayClip("data/Audio/Music/SigmaChad.wav");
+    // backgroundSounds->PlayClip("data/Audio/Music/SigmaChad.wav");
 }
 
 void MainMenuEntity::InputUpdate(InputManager* input_manager)
 {
+    //Buttons input update
+    for (Button* button : buttons)
+    {
+        button->ProcessInputs(input_manager);
+    }
+
     //inputs
     bool upInput = input_manager->CheckInstantInput(vk_Up) || input_manager->CheckInstantInput(vk_W) || input_manager->
-        CheckInstantInput(GAMEPAD_DPAD_UP);
+        CheckInstantInputGamepad(GAMEPAD_DPAD_UP);
     bool downInput = input_manager->CheckInstantInput(vk_Down) || input_manager->CheckInstantInput(vk_S) ||
-        input_manager->CheckInstantInput(GAMEPAD_DPAD_DOWN);
+        input_manager->CheckInstantInputGamepad(GAMEPAD_DPAD_DOWN);
     bool acceptInput = input_manager->CheckInstantInput(vk_Space) ||
-        input_manager->CheckInstantInput(GAMEPAD_SOUTH);
+        input_manager->CheckInstantInputGamepad(GAMEPAD_SOUTH);
 
     //actions
     if (upInput)
@@ -95,9 +137,14 @@ void MainMenuEntity::InputUpdate(InputManager* input_manager)
 
 void MainMenuEntity::RenderUpdate()
 {
+    for (Sprite* sprite : m_sprites)
+    {
+        sprite->draw();
+    }
+    
     //render background
-    BackgroundSprite->update(0, m_position);
-    BackgroundSprite->draw();
+    // BackgroundSprite->update(0, BackgroundSprite->m_position);
+    // BackgroundSprite->draw();
 
     //render buttons
     RenderEngine* render_engine = RenderEngine::GetInstanceRenderEngine();
@@ -108,7 +155,7 @@ void MainMenuEntity::RenderUpdate()
     }
 
     //render text
-    tittleText->SetPosition(tittlePos);
+    // tittleText->SetPosition(tittlePos);
     tittleText->Draw();
 }
 
@@ -171,8 +218,8 @@ void MainMenuEntity::AcceptAction()
 
 void MainMenuEntity::LogicUpdate(double tick)
 {
-    RenderEngine* render_engine = RenderEngine::GetInstanceRenderEngine();
-    aux += tick;
-    tittlePos = Vec2(render_engine->GetScreenCenter().x - 400,
-                     75 + sinf(aux) * 15);
+    // RenderEngine* render_engine = RenderEngine::GetInstanceRenderEngine();
+    // aux += tick;
+    // tittlePos = Vec2(render_engine->GetScreenCenter().x - 400,
+    //                  75 + sinf(aux) * 15);
 }

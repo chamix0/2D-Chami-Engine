@@ -79,6 +79,7 @@ private:
 
     std::map<int, bool> pressed;
     std::set<int> InputsPressed, InputThisFrame;
+    std::set<int> InputsPressedGamepad, InputThisFrameGamepad;
     std::string currentAbcKey;
 
     //gamepad axis
@@ -93,8 +94,12 @@ public:
     void UpdateInputs();
     std::set<int> GetPressedInputs() const;
     std::set<int> GetThisFrameInputs() const;
+    std::set<int> GetPressedInputsGamepad() const;
+    std::set<int> GetThisFrameInputsGamepad() const;
     bool CheckPressedInput(int key);
     bool CheckInstantInput(int key);
+    bool CheckPressedInputGamepad(int key);
+    bool CheckInstantInputGamepad(int key);
 
 
     JoyStickValue GetLeftJoyStick() const;

@@ -39,6 +39,9 @@ void InputManager::UpdateInputs()
     currentAbcKey = "";
     InputsPressed.clear();
     InputThisFrame.clear();
+    InputsPressedGamepad.clear();
+    InputThisFrameGamepad.clear();
+
     //process axis
     ProcessAxis();
 
@@ -52,7 +55,7 @@ void InputManager::UpdateInputs()
     //update gamepad inputs
     for (int key : registeredGamepadInputs)
     {
-        ProcessInputGamepad(key, InputsPressed, InputThisFrame);
+        ProcessInputGamepad(key, InputsPressedGamepad, InputThisFrameGamepad);
     }
 }
 
@@ -66,6 +69,16 @@ std::set<int> InputManager::GetThisFrameInputs() const
     return InputThisFrame;
 }
 
+std::set<int> InputManager::GetPressedInputsGamepad() const
+{
+    return InputsPressedGamepad;
+}
+
+std::set<int> InputManager::GetThisFrameInputsGamepad() const
+{
+    return InputThisFrameGamepad;
+}
+
 bool InputManager::CheckPressedInput(int key)
 {
     return InputsPressed.find(key) != InputsPressed.end();
@@ -74,6 +87,16 @@ bool InputManager::CheckPressedInput(int key)
 bool InputManager::CheckInstantInput(int key)
 {
     return InputThisFrame.find(key) != InputThisFrame.end();
+}
+
+bool InputManager::CheckPressedInputGamepad(int key)
+{
+    return InputsPressedGamepad.find(key) != InputsPressedGamepad.end();
+}
+
+bool InputManager::CheckInstantInputGamepad(int key)
+{
+    return InputThisFrameGamepad.find(key) != InputThisFrameGamepad.end();
 }
 
 JoyStickValue InputManager::GetLeftJoyStick() const

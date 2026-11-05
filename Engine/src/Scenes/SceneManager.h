@@ -10,7 +10,7 @@ private:
 
 public:
     // static Scene* LoadScene(int index);
-    Scene* LoadInputsScene();
+    // Scene* LoadInputsScene();
 
     // //game scenes
     // Scene* GetMainMenu();

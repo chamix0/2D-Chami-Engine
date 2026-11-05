@@ -11,7 +11,7 @@ class MainMenuEntity : public Entity
 {
 private:
     //background
-    Sprite* BackgroundSprite = nullptr;
+    // Sprite* BackgroundSprite = nullptr;
 
     //buttons
     Button* ButtonPlay = nullptr;
@@ -23,7 +23,7 @@ private:
 
     //tittle text
     Text* tittleText = nullptr;
-    Vec2 tittlePos;
+    // Vec2 tittlePos;
     float aux = 0;
 
     //audio sources
@@ -31,6 +31,7 @@ private:
     AudioSource* backgroundSounds = nullptr;
 
 public:
+    void CreateBackground();
     MainMenuEntity(Vec2 position, int renderlayer);
     ~MainMenuEntity();
     void BeginPlay() override;

@@ -1,12 +1,15 @@
 #include "Button.h"
 
+#include "../../Engine_Managers/Input/InputManager.h"
 #include "../Sprite/Sprite.h"
 #include "../Vec2.h"
+#include "../Debug/DrawDebugUtils.h"
 
-Button::Button(std::string spritePath, std::string fontPath,float size)
+Button::Button(std::string spritePath, std::string fontPath, float size, bool HighlightOnHover) : m_HighlightOnHover(
+    HighlightOnHover)
 {
     sprite = new Sprite(spritePath, 2, 2, Vec2(1), BLEND_ALPHA,
-                        Vec2(2), Vec2(0.5f, 0.5f), 0.f, CollisionType::NONE, UI);
+                        Vec2(2), Vec2(0.5f, 0.5f), 0.f, CollisionType::RECTANGLE, UI);
     text = new Text(fontPath, "Hello!", size, Vec2(1));
 }
 
@@ -25,7 +28,7 @@ void Button::Draw(Vec2 position, Vec2 textOffset)
 {
     //draw background
     sprite->update(0, position);
-    sprite->setCurrentFrame(isSelected ? 1 : 0);
+    sprite->setCurrentFrame(isSelected || m_isHovered ? 1 : 0);
     sprite->draw();
 
     //draw text
@@ -47,4 +50,22 @@ bool Button::GetSelected() const
 void Button::SetText(std::string cad)
 {
     text->SetText(cad);
+}
+
+void Button::ProcessInputs(InputManager* input_manager)
+{
+    Vec2 mousePos = input_manager->GetCursorPos();
+
+    //check hover
+    m_isHovered = sprite->collider->collides(mousePos, 1);
+}
+
+bool Button::GetIsHovered() const
+{
+    return m_isHovered;
+}
+
+void Button::SetHighlightOnHover(bool value)
+{
+    m_HighlightOnHover = value;
 }
