@@ -14,7 +14,7 @@ void DoC();
 class Button
 {
 private:
-    void (std::lis *OnClick)();
+    // void (std::lis *OnClick)();
     //sprite
     Sprite* sprite = nullptr;
 
