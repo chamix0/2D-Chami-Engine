@@ -32,7 +32,7 @@ void Button::Draw(Vec2 position, Vec2 textOffset)
     sprite->draw();
 
     //draw text
-    text->SetColor(isSelected ? Vec2(1) : Vec2(0));
+    text->SetColor(isSelected || m_isHovered ? Vec2(1) : Vec2(0));
     text->SetPosition(position - Vec2((sprite->size.x / 2 * sprite->scale.x), 0) + textOffset);
     text->Draw();
 }

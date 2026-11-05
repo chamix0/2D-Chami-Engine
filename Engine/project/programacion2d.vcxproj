@@ -76,6 +76,7 @@
     <ClInclude Include="..\src\Utils\Debug\DebugElem.h" />
     <ClInclude Include="..\src\Utils\Debug\DrawDebugUtils.h" />
     <ClInclude Include="..\src\Utils\GameUtils\DEFINES_ENGINE.h" />
+    <ClInclude Include="..\src\Utils\GameUtils\Delegates.h" />
     <ClInclude Include="..\src\Utils\GameUtils\GameSceneCreationUtils.h" />
     <ClInclude Include="..\src\Utils\GameUtils\MyEnums.h" />
     <ClInclude Include="..\src\Utils\MathUtils.h" />
@@ -209,6 +210,7 @@
     <ClCompile Include="..\src\Utils\Debug\DebugElem.cpp" />
     <ClCompile Include="..\src\Utils\Debug\DrawDebugUtils.cpp" />
     <ClCompile Include="..\src\Utils\GameUtils\DEFINES_ENGINE.cpp" />
+    <ClCompile Include="..\src\Utils\GameUtils\Delegates.cpp" />
     <ClCompile Include="..\src\Utils\GameUtils\GameSceneCreationUtils.cpp" />
     <ClCompile Include="..\src\Utils\GameUtils\MyEnums.cpp" />
     <ClCompile Include="..\src\Utils\MathUtils.cpp" />

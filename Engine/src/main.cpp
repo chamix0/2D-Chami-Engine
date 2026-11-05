@@ -6,12 +6,17 @@
 #include "Engine_Managers/Input/InputManager.h"
 #include "Utils/GameUtils/DEFINES_ENGINE.h"
 #include "Utils/Debug/DrawDebugUtils.h"
+#include "Utils/GameUtils/Delegates.h"
 
 
 using namespace std;
 
+
+
 int main()
 {
+
+    
     //make the game random
     srand((unsigned int)time(NULL));
 
