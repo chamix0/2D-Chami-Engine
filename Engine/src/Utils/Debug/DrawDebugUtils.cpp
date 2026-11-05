@@ -57,7 +57,8 @@ void DrawDebugUtils::DrawDebugOval(Vec2 pos, Vec2 size, Vec2 color)
 int DrawDebugUtils::AddToLog(std::string text)
 {
 #ifdef ADD_LOGS
-    FILE* archivo = fopen("LOG.txt", "a");
+    FILE* archivo;
+    fopen_s(&archivo, "LOG.txt", "a");
 
     if (archivo == NULL)
     {
@@ -76,8 +77,8 @@ int DrawDebugUtils::AddToLog(std::string text)
 
 int DrawDebugUtils::ClearLog()
 {
-    FILE* archivo = fopen("LOG.txt", "w");
-
+    FILE* archivo;
+    fopen_s(&archivo, "LOG.txt", "w");
     if (archivo == NULL)
     {
         printf("File could not be opened.\n");
@@ -103,7 +104,8 @@ time_t DrawDebugUtils::GetCurrentRealTime()
 
 std::string DrawDebugUtils::GetTimeToStamp(time_t time)
 {
-    tm datetime = *localtime(&time);
+    tm datetime;
+    localtime_s(&datetime, &time);
 
     std::string text = "[" + std::to_string(datetime.tm_mday) + "/" + std::to_string(datetime.tm_mon + 1) + "/" +
         std::to_string(

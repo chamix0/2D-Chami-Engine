@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+/Engine/project/.vs
+/Engine/project/Debug
+Engine/LOG.txt
+/Engine/project/programacion2d/Release
+/Engine/project/programacion2d/x64
+/Engine/project/programacion2d/Debug
