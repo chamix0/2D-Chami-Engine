@@ -5,19 +5,19 @@
 # define M_PI           3.14159265358979323846  /* pi */
 
 
-Vec2::Vec2(): x(0.f), y(0.f), z(0), a(1)
+Vec2::Vec2() : x(0.f), y(0.f), z(0), a(1)
 {
 }
 
-Vec2::Vec2(float x): x(x), y(x), z(x), a(1)
+Vec2::Vec2(float x) : x(x), y(x), z(x), a(1)
 {
 }
 
-Vec2::Vec2(float x, float y): x(x), y(y), z(0), a(1)
+Vec2::Vec2(float x, float y) : x(x), y(y), z(0), a(1)
 {
 }
 
-Vec2::Vec2(float R, float G, float B, float A): x(R), y(G), z(B), a(A)
+Vec2::Vec2(float R, float G, float B, float A) : x(R), y(G), z(B), a(A)
 {
 }
 
@@ -239,12 +239,17 @@ Vec2 Vec2::Normalized() const
 float Vec2::angle(Vec2& other) const
 {
     Vec2 dir = (other - *this).Normalized();
-    return atan2(dir.y, dir.x) * 180.f / static_cast<float> (M_PI);
+    return atan2(dir.y, dir.x) * 180.f / static_cast<float>(M_PI);
 }
 
 float Vec2::distance(const Vec2& other) const
 {
     return (other - *this).Magnitude();
+}
+
+float Vec2::Distance(const Vec2& vec1, const Vec2& vec2)
+{
+    return (vec1 - vec2).Magnitude();
 }
 
 Vec2 Vec2::DirectionByAngle(float angle)
@@ -253,7 +258,7 @@ Vec2 Vec2::DirectionByAngle(float angle)
                 sin(angle * (static_cast<float>(M_PI) / 180.f)));
 }
 
-bool Vec2::equals(Vec2 other )
+bool Vec2::equals(Vec2 other)
 {
     return distance(other) < 0.1f;
 }

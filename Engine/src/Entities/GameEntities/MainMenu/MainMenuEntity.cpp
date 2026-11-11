@@ -43,8 +43,8 @@ void MainMenuEntity::CreateBackground()
 MainMenuEntity::MainMenuEntity(Vec2 position, int renderlayer) : Entity(position, renderlayer, "main_menu")
 {
     RenderEngine* render_engine = RenderEngine::GetInstanceRenderEngine();
+    //background
     CreateBackground();
-
 
     //tittle text
     tittleText = new Text("data/Fonts/ChessTextFont.ttf", "A SIMPLE CHESS GAME", 60,
@@ -73,6 +73,19 @@ MainMenuEntity::MainMenuEntity(Vec2 position, int renderlayer) : Entity(position
     buttons.push_back(ButtonCredits);
     buttons.push_back(ButtonExit);
 
+    //init pos
+    Vec2 initialPos = render_engine->GetScreenCenter() + Vec2(0, 0);
+    for (int i = 0; i < buttons.size(); ++i)
+    {
+        buttons[i]->SetPosition(initialPos + Vec2(0, 75) * i);
+    }
+
+    //bind on clicked events
+    ButtonPlay->OnClicked_Event.Bind(this, &MainMenuEntity::OnPlayButtonPressed);
+    ButtonSettings->OnClicked_Event.Bind(this, &MainMenuEntity::OnSettingsButtonPressed);
+    ButtonCredits->OnClicked_Event.Bind(this, &MainMenuEntity::OnCreditsButtonPressed);
+    ButtonExit->OnClicked_Event.Bind(this, &MainMenuEntity::OnExitButtonPressed);
+
     //audio sources
     backgroundSounds = AudioManager::GetInstanceAudioManager()->CreateAudioSource(
         1, 0.5f, true, RenderEngine::GetInstanceRenderEngine()->GetScreenCenter());
@@ -98,7 +111,7 @@ void MainMenuEntity::BeginPlay()
     LogicManager::GetInstanceLogicManager()->GetSceneManager()->DeleteAllScenes("Main_Menu");
 
     //highlight first button    
-    HiglightButton(buttonindex);
+    SelectNone();
 
     //start playing sound
     // backgroundSounds->PlayClip("data/Audio/Music/SigmaChad.wav");
@@ -106,6 +119,12 @@ void MainMenuEntity::BeginPlay()
 
 void MainMenuEntity::InputUpdate(InputManager* input_manager)
 {
+    //reset buttons highlight when mouse moved
+    if (input_manager->GetMouseMovedThisFrame())
+    {
+        SelectNone();
+    }
+
     //Buttons input update
     for (Button* button : buttons)
     {
@@ -141,17 +160,15 @@ void MainMenuEntity::RenderUpdate()
     {
         sprite->draw();
     }
-    
+
     //render background
     // BackgroundSprite->update(0, BackgroundSprite->m_position);
     // BackgroundSprite->draw();
 
     //render buttons
-    RenderEngine* render_engine = RenderEngine::GetInstanceRenderEngine();
-    Vec2 initialPos = Vec2(0, render_engine->GetScreenHeight()) + Vec2(100, -270);
-    for (int i = 0; i < buttons.size(); ++i)
+    for (Button* button : buttons)
     {
-        buttons[i]->Draw(initialPos + Vec2(0, 75) * i, Vec2(20.f, 5));
+        button->Draw(button->GetPosition(), Vec2(20.f, 5));
     }
 
     //render text
@@ -165,6 +182,12 @@ void MainMenuEntity::HiglightButton(int index)
     {
         buttons[i]->SetSelected(i == index);
     }
+}
+
+void MainMenuEntity::SelectNone()
+{
+    buttonindex = -1;
+    HiglightButton(-1);
 }
 
 void MainMenuEntity::SelectNext()
@@ -197,23 +220,44 @@ void MainMenuEntity::AcceptAction()
     //do button actions
     if (buttonindex == 0)
     {
-        SceneManager* scene_manager = LogicManager::GetInstanceLogicManager()->GetSceneManager();
-        LogicManager::GetInstanceLogicManager()->SetCurrentScene(
-            GameSceneCreationUtils::GetDialogueLevel(*scene_manager, DialogueType::START_DIALOGUE, 0));
-
-
-        backgroundSounds->stop();
+        OnPlayButtonPressed();
     }
     else if (buttonindex == 1)
     {
+        OnSettingsButtonPressed();
     }
     else if (buttonindex == 2)
     {
+        OnCreditsButtonPressed();
     }
     else if (buttonindex == 3)
     {
-        LogicManager::GetInstanceLogicManager()->ExitAplication();
+        OnExitButtonPressed();
     }
+}
+
+void MainMenuEntity::OnPlayButtonPressed()
+{
+    SceneManager* scene_manager = LogicManager::GetInstanceLogicManager()->GetSceneManager();
+    LogicManager::GetInstanceLogicManager()->SetCurrentScene(
+        GameSceneCreationUtils::GetRegularGameLevel(*scene_manager));
+
+    backgroundSounds->stop();
+}
+
+void MainMenuEntity::OnExitButtonPressed()
+{
+    LogicManager::GetInstanceLogicManager()->ExitAplication();
+}
+
+void MainMenuEntity::OnSettingsButtonPressed()
+{
+    DrawDebugUtils::AddToLog("Settings Button Pressed");
+}
+
+void MainMenuEntity::OnCreditsButtonPressed()
+{
+    DrawDebugUtils::AddToLog("Credits Button Pressed");
 }
 
 void MainMenuEntity::LogicUpdate(double tick)

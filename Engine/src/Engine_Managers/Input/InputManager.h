@@ -59,7 +59,8 @@ private:
         {GAMEPAD_RIGHT_THUMB, "GAMEPAD_RIGHT_THUMB"},
     };
 
-    const int registeredKeyboardInputs[75] = {vk_MouseWheelDown, vk_MouseWheelUp,
+    const int registeredKeyboardInputs[75] = {
+        vk_MouseWheelDown, vk_MouseWheelUp,
         vk_LMouseButton, vk_RMouseButton, vk_MiddelMouseButton, vk_XMouseButton1, vk_XMouseButton2,
         vk_BackSpace, vk_Tab, vk_Return, vk_Control, vk_Alt, vk_Pause, vk_CapsLock, vk_Escape, vk_Space,
         vk_Left, vk_Up, vk_Right, vk_Down, vk_PrintScreen, vk_Insert,
@@ -87,6 +88,10 @@ private:
     JoyStickValue rightJoystick;
     float rightTrigger = 0.f;
     float leftTrigger = 0.f;
+
+    //mouse movement
+    bool mouseMovedThisFrame = false;
+    Vec2 prevMousePosition = Vec2(0, 0);
 
 public:
     static InputManager* GetInstanceInputManager();
@@ -118,6 +123,8 @@ public:
 
     Vec2 GetCursorPos();
     std::string GetCurrentAbcKey();
+    
+    bool GetMouseMovedThisFrame() const;
 
 private:
     void OnMouseWheelUp();
@@ -129,5 +136,6 @@ private:
     void ProcessRightJoyStick(XINPUT_STATE& state);
     void ProcessLeftTrigger(XINPUT_STATE& state);
     void ProcessRightTrigger(XINPUT_STATE& state);
+    void ProcessMouseMovement();
     static void scroll_func(GLFWwindow* glf_wwindow, double x, double arg);
 };

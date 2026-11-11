@@ -62,6 +62,7 @@
     <ClInclude Include="..\src\Entities\GameEntities\Player\GameData.h" />
     <ClInclude Include="..\src\Entities\GameEntities\Player\Hud\HudEntity.h" />
     <ClInclude Include="..\src\Entities\GameEntities\Player\PlayerEntity.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\RegularGame\RegularGameManager.h" />
     <ClInclude Include="..\src\Entities\GameEntities\WinScreen\WinScreenEntity.h" />
     <ClInclude Include="..\src\Scenes\Scene.h" />
     <ClInclude Include="..\src\Scenes\SceneManager.h" />
@@ -195,6 +196,7 @@
     <ClCompile Include="..\src\Entities\GameEntities\Player\GameData.cpp" />
     <ClCompile Include="..\src\Entities\GameEntities\Player\Hud\HudEntity.cpp" />
     <ClCompile Include="..\src\Entities\GameEntities\Player\PlayerEntity.cpp" />
+    <ClCompile Include="..\src\Entities\GameEntities\RegularGame\RegularGameManager.cpp" />
     <ClCompile Include="..\src\Entities\GameEntities\WinScreen\WinScreenEntity.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\Scenes\Scene.cpp" />

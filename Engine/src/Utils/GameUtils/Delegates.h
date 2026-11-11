@@ -67,8 +67,7 @@ struct delegate<void(Args...)>
         // y, si lo es, compara los callbacks almacenados.
         bool do_cmp(base* other)
         {
-            call<T>* tmp = dynamic_cast<call<T>*>(other);
-            return tmp && this->d_callback == tmp->d_callback;
+            return this == other;
         }
 
         // Invoca el callback almacenado pasando los argumentos recibidos.
@@ -91,12 +90,40 @@ public:
     }
 
     // Sobrecarga del operador += para añadir un callback al delegate.
+    delegate& ClearCallbacks()
+    {
+        this->d_callbacks.clear();
+        return *this;
+    }
+
+    // Sobrecarga del operador += para añadir un callback al delegate.
     template <typename T>
     delegate& operator+=(T&& callback)
     {
         this->d_callbacks.emplace_back(new call<T>(std::forward<T>(callback)));
         return *this;
     }
+
+    template <typename T>
+    void Bind(T* instance, void (T::*method)())
+    {
+        // Reutilizamos tu propio operador += creando una lambda interna
+        *this += [instance, method]()
+        {
+            (instance->*method)();
+        };
+    }
+    
+    template <typename T>
+    void Bind(T* instance, void (T::*method)() const)
+    {
+        // Versión para métodos const (por si acaso)
+        *this += [instance, method]()
+        {
+            (instance->*method)();
+        };
+    }
+
 
     // Sobrecarga del operador -= para eliminar un callback del delegate.
     template <typename T>

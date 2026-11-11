@@ -4,11 +4,11 @@
 class GameCameraEntity : public Entity
 {
 private:
-    Entity* target = nullptr;
-    float m_speed = 1.f;
-    bool reachedTarget = false;
-    Vec2 aimOffset;
-    float maxAimDistance=75.f;
+    // Entity* target = nullptr;
+    // float m_speed = 1.f;
+    // bool reachedTarget = false;
+    // Vec2 aimOffset;
+    // float maxAimDistance=75.f;
 
 public:
     GameCameraEntity(Vec2 pos, int rendLayer);

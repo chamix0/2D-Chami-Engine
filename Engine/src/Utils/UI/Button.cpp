@@ -15,6 +15,8 @@ Button::Button(std::string spritePath, std::string fontPath, float size, bool Hi
 
 Button::~Button()
 {
+    OnClicked_Event.ClearCallbacks();
+
     //delete sprite
     delete sprite;
     sprite = nullptr;
@@ -22,6 +24,16 @@ Button::~Button()
     //delete text
     delete text;
     text = nullptr;
+}
+
+void Button::SetPosition(Vec2 position)
+{
+    m_position = position;
+}
+
+Vec2 Button::GetPosition() const
+{
+    return m_position;
 }
 
 void Button::Draw(Vec2 position, Vec2 textOffset)
@@ -58,6 +70,13 @@ void Button::ProcessInputs(InputManager* input_manager)
 
     //check hover
     m_isHovered = sprite->collider->collides(mousePos, 1);
+
+    //check button clicked
+    if (input_manager->CheckInstantInput(vk_LMouseButton) && m_isHovered)
+    {
+        //Trigger event
+        OnClicked_Event();
+    }
 }
 
 bool Button::GetIsHovered() const

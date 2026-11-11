@@ -26,6 +26,7 @@ C:\Users\charl\Documents\GitHub\2D-Chami-Engine\Engine\src\Entities\GameEntities
 C:\Users\charl\Documents\GitHub\2D-Chami-Engine\Engine\src\Entities\GameEntities\Player\GameData.cpp;C:\Users\charl\Documents\GitHub\2D-Chami-Engine\Engine\project\programacion2d\Debug\GameData.obj
 C:\Users\charl\Documents\GitHub\2D-Chami-Engine\Engine\src\Entities\GameEntities\Player\Hud\HudEntity.cpp;C:\Users\charl\Documents\GitHub\2D-Chami-Engine\Engine\project\programacion2d\Debug\HudEntity.obj
 C:\Users\charl\Documents\GitHub\2D-Chami-Engine\Engine\src\Entities\GameEntities\Player\PlayerEntity.cpp;C:\Users\charl\Documents\GitHub\2D-Chami-Engine\Engine\project\programacion2d\Debug\PlayerEntity.obj
+C:\Users\charl\Documents\GitHub\2D-Chami-Engine\Engine\src\Entities\GameEntities\RegularGame\RegularGameManager.cpp;C:\Users\charl\Documents\GitHub\2D-Chami-Engine\Engine\project\programacion2d\Debug\RegularGameManager.obj
 C:\Users\charl\Documents\GitHub\2D-Chami-Engine\Engine\src\Entities\GameEntities\WinScreen\WinScreenEntity.cpp;C:\Users\charl\Documents\GitHub\2D-Chami-Engine\Engine\project\programacion2d\Debug\WinScreenEntity.obj
 C:\Users\charl\Documents\GitHub\2D-Chami-Engine\Engine\src\main.cpp;C:\Users\charl\Documents\GitHub\2D-Chami-Engine\Engine\project\programacion2d\Debug\main.obj
 C:\Users\charl\Documents\GitHub\2D-Chami-Engine\Engine\src\Scenes\Scene.cpp;C:\Users\charl\Documents\GitHub\2D-Chami-Engine\Engine\project\programacion2d\Debug\Scene.obj

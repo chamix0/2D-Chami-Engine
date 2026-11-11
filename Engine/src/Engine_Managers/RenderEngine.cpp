@@ -29,7 +29,7 @@ int RenderEngine::Init()
     if (initGlfw == 0) { return -1; }
 
     //create the window
-    GLFWwindow* window = glfwCreateWindow(WINDOW_WITH, WINDOW_HEIGHT, "The average shopping experience",
+    GLFWwindow* window = glfwCreateWindow(WINDOW_WITH, WINDOW_HEIGHT, "A simple chess game",
                                           nullptr/*en ventana*/, nullptr);
     glfwSetWindowSizeLimits(window, WINDOW_WITH, WINDOW_HEIGHT, WINDOW_WITH, WINDOW_HEIGHT);
 

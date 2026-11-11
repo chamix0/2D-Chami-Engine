@@ -70,8 +70,13 @@ public:
     /// \param other 
     /// \return 
     float distance(const Vec2& other) const;
-
+    
+    /// \brief Distance between two points
+    /// \return 
+    static float Distance(const Vec2& vec1, const Vec2& vec2);
+    
     static Vec2 DirectionByAngle(float angle);
+    
 
     bool equals(Vec2 other= Vec2());
 };

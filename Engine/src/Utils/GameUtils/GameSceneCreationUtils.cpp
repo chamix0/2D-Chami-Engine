@@ -5,6 +5,7 @@
 #include "../src/Entities/GameEntities/GameOver/GameOverScreenEntity.h"
 #include "../src/Entities/GameEntities/WinScreen/WinScreenEntity.h"
 #include "../src/Entities/GameEntities/LoadScreenEntity/LoadScreenEntity.h"
+#include "../src/Entities/GameEntities/RegularGame/RegularGameManager.h"
 #include "../src/Engine_Managers/RenderEngine.h"
 #include "GameSceneCreationUtils.h"
 
@@ -31,6 +32,48 @@ Scene* GameSceneCreationUtils::GetMainMenu(SceneManager& sceneManager)
 
     //exists
     return scene;
+}
+
+Scene* GameSceneCreationUtils::GetRegularGameLevel(SceneManager& sceneManager)
+{
+    std::string sceneName="RegularGameLevel";
+    Scene* scene = sceneManager.GetScene(sceneName);
+
+    //doesnt exist
+    if (scene == nullptr)
+    {
+        //entity array
+        std::map<int, std::vector<Entity*>> entities;
+        
+        //Game manager entity
+        RegularGameManager* regularGameManager = new RegularGameManager();
+        entities[regularGameManager->GetRenderLayer()].push_back(regularGameManager);
+
+
+        //camera
+        GameCameraEntity* camera = new GameCameraEntity(
+            RenderEngine::GetInstanceRenderEngine()->GetScreenCenter(),
+            1);
+        entities[camera->GetRenderLayer()].push_back(camera);
+
+        //HUD
+        // HudEntity* hud = new HudEntity(RenderEngine::GetInstanceRenderEngine()->GetScreenCenter(),
+        //                                20);
+        // entities[hud->GetRenderLayer()].push_back(hud);
+
+        //create scene
+        scene = new Scene(entities);
+
+        //load entities
+        // scene->LoadTileMap("data/Maps/Mercadona.tmx");
+        scene->SetGameCameraEntity(camera);
+        sceneManager.AddScene(sceneName, scene);
+
+        return scene;
+    }
+    
+    //exists
+    return scene;   
 }
 
 Scene* GameSceneCreationUtils::GetGameLevel(SceneManager& sceneManager)

@@ -38,9 +38,17 @@ public:
     void InputUpdate(InputManager* input_manager) override;
     void RenderUpdate() override;
     void HiglightButton(int index);
+    void SelectNone();
     void SelectNext();
     void SelectPrev();
     void AcceptAction();
+
+    //events
+    void OnPlayButtonPressed();
+    void OnExitButtonPressed();
+    void OnSettingsButtonPressed();
+    void OnCreditsButtonPressed();
+
 
     void LogicUpdate(double tick) override;
 };

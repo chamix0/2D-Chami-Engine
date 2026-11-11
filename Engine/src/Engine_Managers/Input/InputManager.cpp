@@ -45,6 +45,8 @@ void InputManager::UpdateInputs()
     //process axis
     ProcessAxis();
 
+    //process mouse movement
+    ProcessMouseMovement();
 
     //update keyboard inputs
     for (int key : registeredKeyboardInputs)
@@ -138,6 +140,11 @@ Vec2 InputManager::GetCursorPos()
 std::string InputManager::GetCurrentAbcKey()
 {
     return currentAbcKey;
+}
+
+bool InputManager::GetMouseMovedThisFrame() const
+{
+    return mouseMovedThisFrame;
 }
 
 void InputManager::OnMouseWheelUp()
@@ -243,6 +250,7 @@ void InputManager::ProcessLeftJoyStick(XINPUT_STATE& state)
 {
     float LX = state.Gamepad.sThumbLX;
     float LY = state.Gamepad.sThumbLY;
+
     //determine how far the controller is pushed
     float magnitude = sqrt(LX * LX + LY * LY);
 
@@ -334,6 +342,13 @@ void InputManager::ProcessRightTrigger(XINPUT_STATE& state)
     }
 
     rightTrigger = normalizedMagnitude;
+}
+
+void InputManager::ProcessMouseMovement()
+{
+    Vec2 mousePosition = GetCursorPos();
+    mouseMovedThisFrame = Vec2::Distance(mousePosition, prevMousePosition) > 2.5f;
+    prevMousePosition = mousePosition;
 }
 
 void InputManager::scroll_func(GLFWwindow* glf_wwindow, double x, double y)
