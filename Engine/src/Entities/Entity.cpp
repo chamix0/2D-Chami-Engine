@@ -7,7 +7,7 @@
 #include "../Utils/Sprite/Sprite.h"
 
 
-Entity::Entity(Vec2 position, int renderLayer, std::string tag, bool CheckCollision): m_renderLayer(renderLayer),
+Entity::Entity(Vec2 position, int renderLayer, std::string tag, bool CheckCollision) : m_renderLayer(renderLayer),
     m_tag(tag), m_position(position), m_checkCollision(CheckCollision)
 {
 }
@@ -16,6 +16,11 @@ Entity::~Entity()
 {
     for (Sprite* sprite : m_sprites)
     {
+        if (sprite == nullptr)
+        {
+            continue;
+        }
+
         delete sprite;
         sprite = nullptr;
     }
@@ -69,7 +74,6 @@ void Entity::LogicLateUpdate(double tick)
 
 void Entity::InputUpdate(InputManager* input_manager)
 {
-    
 }
 
 void Entity::OnCollisionEnter(Entity* otherEntity)

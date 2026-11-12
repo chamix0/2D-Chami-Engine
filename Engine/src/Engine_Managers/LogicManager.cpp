@@ -178,7 +178,7 @@ bool LogicManager::GetPaused()
 
 std::map<int, std::vector<Entity*>> LogicManager::GetEntities()
 {
-    return currentScene->GetEntities();
+    return GetCurrentScene()->GetEntities();
 }
 
 std::vector<Entity*> LogicManager::GetEntitiesArray()

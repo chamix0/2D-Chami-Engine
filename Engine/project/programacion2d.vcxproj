@@ -49,6 +49,9 @@
     <ClInclude Include="..\src\Entities\CoreEntities\Tiles\OclussionTileEntity.h" />
     <ClInclude Include="..\src\Entities\CoreEntities\Tiles\TileEntity.h" />
     <ClInclude Include="..\src\Entities\Entity.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\Board\Board.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\Board\Cell.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\Board\Pieces\Piece.h" />
     <ClInclude Include="..\src\Entities\GameEntities\Camera\GameCameraEntity.h" />
     <ClInclude Include="..\src\Entities\GameEntities\Cashier\CashierEntity.h" />
     <ClInclude Include="..\src\Entities\GameEntities\Coins\CoinEntity.h" />
@@ -62,6 +65,7 @@
     <ClInclude Include="..\src\Entities\GameEntities\Player\GameData.h" />
     <ClInclude Include="..\src\Entities\GameEntities\Player\Hud\HudEntity.h" />
     <ClInclude Include="..\src\Entities\GameEntities\Player\PlayerEntity.h" />
+    <ClInclude Include="..\src\Entities\GameEntities\RegularGame\Game.h" />
     <ClInclude Include="..\src\Entities\GameEntities\RegularGame\RegularGameManager.h" />
     <ClInclude Include="..\src\Entities\GameEntities\WinScreen\WinScreenEntity.h" />
     <ClInclude Include="..\src\Scenes\Scene.h" />
@@ -107,6 +111,9 @@
     <ClCompile Include="..\src\Entities\CoreEntities\Tiles\OclussionTileEntity.cpp" />
     <ClCompile Include="..\src\Entities\CoreEntities\Tiles\TileEntity.cpp" />
     <ClCompile Include="..\src\Entities\Entity.cpp" />
+    <ClCompile Include="..\src\Entities\GameEntities\Board\Board.cpp" />
+    <ClCompile Include="..\src\Entities\GameEntities\Board\Cell.cpp" />
+    <ClCompile Include="..\src\Entities\GameEntities\Board\Pieces\Piece.cpp" />
     <ClCompile Include="..\src\Entities\GameEntities\Camera\GameCameraEntity.cpp" />
     <ClCompile Include="..\src\Entities\GameEntities\Cashier\CashierEntity.cpp">
       <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
@@ -196,6 +203,7 @@
     <ClCompile Include="..\src\Entities\GameEntities\Player\GameData.cpp" />
     <ClCompile Include="..\src\Entities\GameEntities\Player\Hud\HudEntity.cpp" />
     <ClCompile Include="..\src\Entities\GameEntities\Player\PlayerEntity.cpp" />
+    <ClCompile Include="..\src\Entities\GameEntities\RegularGame\Game.cpp" />
     <ClCompile Include="..\src\Entities\GameEntities\RegularGame\RegularGameManager.cpp" />
     <ClCompile Include="..\src\Entities\GameEntities\WinScreen\WinScreenEntity.cpp" />
     <ClCompile Include="..\src\main.cpp" />

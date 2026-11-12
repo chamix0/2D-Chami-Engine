@@ -36,15 +36,15 @@ Scene* GameSceneCreationUtils::GetMainMenu(SceneManager& sceneManager)
 
 Scene* GameSceneCreationUtils::GetRegularGameLevel(SceneManager& sceneManager)
 {
-    std::string sceneName="RegularGameLevel";
+    std::string sceneName = "RegularGameLevel";
     Scene* scene = sceneManager.GetScene(sceneName);
 
-    //doesnt exist
+    //doesn't exist
     if (scene == nullptr)
     {
         //entity array
         std::map<int, std::vector<Entity*>> entities;
-        
+
         //Game manager entity
         RegularGameManager* regularGameManager = new RegularGameManager();
         entities[regularGameManager->GetRenderLayer()].push_back(regularGameManager);
@@ -52,7 +52,7 @@ Scene* GameSceneCreationUtils::GetRegularGameLevel(SceneManager& sceneManager)
 
         //camera
         GameCameraEntity* camera = new GameCameraEntity(
-            RenderEngine::GetInstanceRenderEngine()->GetScreenCenter(),
+            Vec2(0),
             1);
         entities[camera->GetRenderLayer()].push_back(camera);
 
@@ -71,9 +71,9 @@ Scene* GameSceneCreationUtils::GetRegularGameLevel(SceneManager& sceneManager)
 
         return scene;
     }
-    
+
     //exists
-    return scene;   
+    return scene;
 }
 
 Scene* GameSceneCreationUtils::GetGameLevel(SceneManager& sceneManager)

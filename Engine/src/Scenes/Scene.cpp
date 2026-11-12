@@ -57,6 +57,9 @@ void Scene::InitScene()
 {
     loaded = true;
     std::vector<Entity*> aux = GetEntitiesArray();
+    
+    //update camera position to the center
+    camera->SetPostion(Vec2(abs(0), abs(0), abs(0), 0));
 
     //call awake function
     for (Entity* entity : aux)
@@ -69,14 +72,18 @@ void Scene::InitScene()
     {
         entity->BeginPlay();
     }
-
-    //update camera position to the center
-    camera->SetPostion(Vec2(abs(0), abs(0), abs(0), 0));
 }
 
 void Scene::AddEntity(Entity* entity)
 {
     entities[entity->GetRenderLayer()].push_back(entity);
+
+    //execute begin play and awake when the scene has already been loaded and a new entity is added
+    if (loaded)
+    {
+        entity->Awake();
+        entity->BeginPlay();
+    }
 }
 
 Camera* Scene::GetCamera()

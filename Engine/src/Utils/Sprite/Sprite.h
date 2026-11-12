@@ -52,9 +52,11 @@ public:
            Vec2 pivot, int fps, CollisionType collisionType = CollisionType::NONE, RenderMode render_mode = WORLD,
            int currentFrame = 0);
     ~Sprite();
+    
     /// \brief update sprite state
     /// \param deltaTime 
     void update(float deltaTime, Vec2 pos, float angle = 0);
+    
     /// \brief draw the sprite
     void draw() const;
     void SimpleDraw() const;

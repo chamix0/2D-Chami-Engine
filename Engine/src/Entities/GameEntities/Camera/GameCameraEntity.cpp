@@ -34,16 +34,10 @@ void GameCameraEntity::BeginPlay()
 
 void GameCameraEntity::LogicLateUpdate(double tick)
 {
-    // // Entity::LogicLateUpdate(tick);
-    //
-    // if (target == nullptr)
-    // {
-    //     return;
-    // }
-    //
-    // Vec2 targetPos = target->GetPosition();
-    // Vec2 direction = (targetPos - GetPosition()).Normalized();
-    //
+    Entity::LogicLateUpdate(tick);
+    
+    
+ 
     // if (!reachedTarget)
     // {
     //     //lerp position
